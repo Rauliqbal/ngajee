@@ -59,13 +59,19 @@
         بِسْمِ اللّٰهِ الرَّحْمٰنِ الرَّحِيْمِ
       </h4>
     </div>
+    
+    <CardAyat class="mt-8"/>
+   
   </div>
 </template>
 
 <script>
 import axios from 'axios';
+import CardAyat from '@/components/CardAyat.vue'
 
 export default {
+    components:{CardAyat},
+
     data() {
         return {
             surah: [],
