@@ -11,6 +11,9 @@ module.exports = {
       },
       fontFamily: {
         'poppins': ['poppins', 'sans-serif']
+      },
+      backgroundImage: {
+        'header-pattern': "url('/src/assets/bg-image.webp')"
       }
     },
   },
