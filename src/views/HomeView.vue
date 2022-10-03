@@ -1,6 +1,6 @@
 <template>
   <div>
-    <ModalStarted class="hidden"/>
+    <ModalStarted class=""/>
    <div class="fixed left-0 right-0 top-0  z-20">
     <div class="bg-primary px-6 pb-6 relative shadow-md">
       <header class="grid grid-cols-3 py-6">
@@ -18,7 +18,7 @@
             <p class="text-sm text-slate-200 mt-1">Versi 1.0.0</p>
           </div> 
           <div class="flex flex-col pt-2">
-            <button @click="toggleDark" class="flex items-center justify-between px-6 py-4 hover:bg-slate-300 transition-all duration-300 ease-out">
+            <button class="flex items-center justify-between px-6 py-4 hover:bg-slate-300 transition-all duration-300 ease-out">
               <span class="text-primary hover:text-green-800 transition-all duration-300">Change Theme</span>
               <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
               <g clip-path="url(#clip0_105_367)">
@@ -86,21 +86,15 @@ export default {
   name: 'HomeView',
   components: { CardSurat,ModalStarted },
   data() {
-    let isDark = localStorage.getItem('darkMode') == 'true'
     return {
       surats: [],
       isOpen: false,
-      isDark
     }
   },
   methods: {
     setSurats(data) {
       this.surats = data;
     },
-    toggleDark() {
-      this.isDark = !this.isDark;
-      localStorage.setItem('darkmode', this.isDark);
-    }
   },
   mounted() {
     axios
