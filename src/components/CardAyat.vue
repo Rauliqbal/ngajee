@@ -12,7 +12,7 @@
                 
         </div>
         <h3 class="text-green-800 italic font-medium text-end mt-4 text-sm">"{{ayat.tr}}”</h3>
-        <p class="text-slate-500 mt-8">“{{ayat.idn}}”</p>   
+        <p class="text-slate-500 mt-8 text-sm">“{{ayat.idn}}”</p>   
     </div>
     </div>
 </template>

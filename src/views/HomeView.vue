@@ -1,13 +1,14 @@
 <template>
   <div>
+    <ModalStarted class="hidden"/>
    <div class="fixed left-0 right-0 top-0  z-20">
-    <div class="bg-[#DEF5F6] px-6 pb-4 relative">
+    <div class="bg-primary px-6 pb-6 relative shadow-md">
       <header class="grid grid-cols-3 py-6">
       <input class="peer hidden" type="checkbox" name="hamburger" id="hamburger">
       <label class="peer-checked:hamburger z-30" for="hamburger">
         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <rect y="6" width="24" height="3" rx="1.5" class="fill-black"/>
-          <rect y="15" width="16" height="3" rx="1.5" class="fill-black"/>
+          <rect y="6" width="24" height="3" rx="1.5" class="fill-white"/>
+          <rect y="15" width="16" height="3" rx="1.5" class="fill-white"/>
         </svg>
       </label>
       <div class="absolute top-0 left-0 bottom-0 h-screen bg-black/40 w-full  -translate-x-full peer-checked:-translate-x-0 transition-all duration-300 delay-150">
@@ -17,7 +18,7 @@
             <p class="text-sm text-slate-200 mt-1">Versi 1.0.0</p>
           </div> 
           <div class="flex flex-col pt-2">
-            <a href="" class="flex items-center justify-between px-6 py-4 hover:bg-slate-300 transition-all duration-300 ease-out">
+            <button @click="toggleDark" class="flex items-center justify-between px-6 py-4 hover:bg-slate-300 transition-all duration-300 ease-out">
               <span class="text-primary hover:text-green-800 transition-all duration-300">Change Theme</span>
               <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
               <g clip-path="url(#clip0_105_367)">
@@ -43,9 +44,9 @@
               </defs>
               </svg>
 
-            </a>
+            </button>
 
-            <a href="" class="flex items-center justify-between px-6 py-4 hover:bg-slate-300 transition-all duration-300 ease-out">
+            <a class="flex items-center justify-between px-6 py-4 hover:bg-slate-300 transition-all duration-300 ease-out">
               <span class="text-primary hover:text-green-800 transition-all duration-300">Privacy Policy</span>
               <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path d="M12 1C18.0775 1 23 5.9225 23 12C23 18.0775 18.0775 23 12 23C5.9225 23 1 18.0775 1 12C1 5.9225 5.9225 1 12 1ZM13.375 6.5C13.375 5.74375 12.7563 5.125 12 5.125C11.2437 5.125 10.625 5.74375 10.625 6.5C10.625 7.25625 11.2437 7.875 12 7.875C12.7563 7.875 13.375 7.25625 13.375 6.5ZM13.375 18.875V10.625H10.625V18.875H13.375Z" fill="#808080"/>
@@ -60,14 +61,14 @@
 
         </div>
       </div>
-      <h1 class="text-lg text-primary font-semibold text-center">My Quran</h1>
+      <h1 class="text-lg text-white font-semibold text-center">My Quran</h1>
     </header>
-    <h5 class="text-xl text-slate-500 text-end mb-4">السلام عليكم ورحمة الله وبركاته</h5>
-      <input class="px-6 py-4 w-full rounded-full outline-none" type="search" name="search" placeholder="Cari surat...">  
+    <h5 class="text-xl text-white text-end mb-4">السلام عليكم ورحمة الله وبركاته</h5>
+      <input class="px-6 py-3 w-full rounded-full outline-none" type="search" name="search" placeholder="Cari surat...">  
     </div>
    </div>
 
-    <div class="pt-48 grid grid-cols-1 gap-3 mt-4 pb-8 px-6">
+    <div class="pt-52 grid grid-cols-1 gap-3 mt-4 pb-8 px-6">
       <div v-for="surat in surats" :key="surat.id">
         <CardSurat :surat="surat"/>
       </div>
@@ -78,18 +79,27 @@
 <script>
 import axios from 'axios';
 import CardSurat from '@/components/CardSurat.vue';
+import ModalStarted from '@/components/ModalStarted.vue'
+
+
 export default {
   name: 'HomeView',
-  components: { CardSurat },
+  components: { CardSurat,ModalStarted },
   data() {
+    let isDark = localStorage.getItem('darkMode') == 'true'
     return {
       surats: [],
-      isOpen: false
+      isOpen: false,
+      isDark
     }
   },
   methods: {
     setSurats(data) {
       this.surats = data;
+    },
+    toggleDark() {
+      this.isDark = !this.isDark;
+      localStorage.setItem('darkmode', this.isDark);
     }
   },
   mounted() {
