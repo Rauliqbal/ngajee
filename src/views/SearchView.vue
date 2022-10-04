@@ -70,14 +70,14 @@ export default {
     },
     searchSurat() {
       axios
-        .get("https://equran.id/api/surat?q=" + this.search)
+        .get("https://api-mymushaf.herokuapp.com/surah?q=" + this.search)
         .then((response) => this.setSurats(response.data))
         .catch((error) => console.log(error + "Tidak dapat response"));
     },
   },
   mounted() {
     axios
-      .get("https://equran.id/api/surat")
+      .get("https://api-mymushaf.herokuapp.com/surah")
       .then((response) => this.setSurats(response.data))
       .catch((error) => console.log(error + "Tidak dapat response"));
   },
