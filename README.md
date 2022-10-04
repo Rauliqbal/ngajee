@@ -1,24 +1,47 @@
-# e-quran
+# My Mushaf Indonesia - Aplikasi Al - Qura'n Digital Berbahasa indonesia
 
-## Project setup
-```
-npm install
-```
+My Mushaf Indonesia adalah Aplikasi Al - Qur'an Digital Berbasis Website App, Sumber utama dari data yang terdapat pada Aplikasi ini adalah Aplikasi Quran Kementerian Agama Republik Indonesia dan audio dari Quran Central. Semoga dapat dimanfaatkan sebaik-baiknya.
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
 
-### Compiles and minifies for production
-```
-npm run build
-```
 
-### Lints and fixes files
-```
-npm run lint
-```
+## Table of contents
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+- [My Mushaf Indonesia - Aplikasi Al - Qura'n Digital Berbahasa indonesia](#my-mushaf-indonesia---aplikasi-al---quran-digital-berbahasa-indonesia)
+  - [Table of contents](#table-of-contents)
+  - [Overview](#overview)
+    - [Screenshot](#screenshot)
+    - [Features](#features)
+    - [Links](#links)
+  - [My process](#my-process)
+    - [Built with](#built-with)
+  - [Author](#author)
+
+## Overview
+
+### Screenshot
+
+![](./screenshot.png)
+
+### Features
+
+- Memiliki 114 Surat dan 30 Juz
+- Terdapat Audio MP3 Murottal
+
+### Links
+
+- [Live site URL](https://ijuldev.github.io/bookshelf-app)
+
+## My process
+
+### Built with
+
+- VUE JS
+- TAILWIND CSS
+- VUE ROUTER
+- PROGESSIVE WEB APP
+- API [E-Quran](https://equran.id/apidev), 
+
+## Author
+
+- Front-End Developer - [@raul.iqbl_](https://www.instagram.com/raul.iqbl_/)
+- UI Designer - [@raisha.rmdnt_](https://www.instagram.com/raisha.rmdnt_/)
