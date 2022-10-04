@@ -38,7 +38,7 @@ My Mushaf Indonesia adalah Aplikasi Al - Qur'an Digital Berbasis Website App, Su
 - VUE JS
 - TAILWIND CSS
 - VUE ROUTER
-- PROGESSIVE WEB APP
+- PROGRESSIVE WEB APP
 - API [E-Quran](https://equran.id/apidev), 
 
 ## Author
