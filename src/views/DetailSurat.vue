@@ -1,6 +1,6 @@
 <template>
-  <div class="px-6 pb-8 min-h-screen bg-[#DEF5F6]">
-    <header class="z-30 fixed inset-x-0 bg-primary flex items-center justify-between p-6 shadow-md">
+  <div class="px-4 pb-8 min-h-screen bg-[#DEF5F6]">
+    <header class="z-30 fixed inset-x-0 bg-primary flex items-center justify-between py-6 px-4 shadow-md">
       <router-link to="/">
         <svg
           width="24"
