@@ -1,5 +1,5 @@
 <template>
-  <router-link v-for="surat in surah" :key="surat.id" :to="'/surat/' + surat.nomor" class="flex items-center justify-between py-3 px-4 bg-white rounded-lg hover:bg-slate-300
+  <router-link @click="reloadPage" v-for="surat in surah" :key="surat.id" :to="'/surat/' + surat.nomor" class="flex items-center justify-between py-3 px-4 bg-white rounded-lg hover:bg-slate-300
                     transition-all
                     duration-300
                     ease-out">
@@ -28,7 +28,11 @@ export default {
     methods : {
         setSurah (data) {
             this.surah = data;
-        }
+        },
+        reloadPage() {
+           window.setTimeout(function(){location.reload()},100)
+        },
+        
     },
     mounted() {
         axios

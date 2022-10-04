@@ -67,7 +67,6 @@
               peer-checked:-translate-x-0
               transition-all
               duration-300
-              delay-150
             "
           >
             <div class="bg-white h-full ml-auto  max-w-[18rem] flex flex-col">
@@ -124,6 +123,7 @@ export default {
         setSurah (data) {
             this.surah = data;
         }
+        
     },
     mounted() {
         axios
