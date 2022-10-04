@@ -35,8 +35,14 @@
       <h2 class="text-lg text-white font-semibold text-center">
         {{surah.nama_latin}}
       </h2>
-      <span class="text-end">
-        <svg
+      <input
+            class="peer hidden"
+            type="checkbox"
+            name="hamburger"
+            id="hamburger"
+          />
+          <label class="peer-checked:hamburger z-30 cursor-pointer" for="hamburger">
+            <svg
           width="24"
           height="24"
           viewBox="0 0 24 24"
@@ -47,7 +53,41 @@
           <circle cx="12" cy="12" r="2" fill="white" />
           <circle cx="12" cy="20" r="2" fill="white" />
         </svg>
-      </span>
+          </label>
+          <div
+            class="
+              absolute
+              top-0
+              left-0
+              bottom-0
+              h-screen
+              bg-black/40
+              w-full
+              translate-x-full
+              peer-checked:-translate-x-0
+              transition-all
+              duration-300
+              delay-150
+            "
+          >
+            <div class="bg-white h-full ml-auto  max-w-[18rem] flex flex-col">
+              <div class="flex flex-col bg-primary py-8 px-6">
+                <h1 class="text-white text-2xl font-semibold">
+                  Daftar Surat
+                </h1>
+              </div>
+              <div class="flex flex-col pt-2 overflow-auto">
+                <ListSurat/>
+              </div>
+
+              <div
+                class="flex flex-col items-center justify-center mt-auto py-4"
+              >
+                <h3 class="text-base text-primary">Develop with</h3>
+                <h5 class="text-slate-500 text-sm">Raul Raisha</h5>
+              </div>
+            </div>
+          </div>
     </header>
 
     <div class="pt-24">
@@ -70,9 +110,10 @@
 <script>
 import axios from 'axios';
 import CardAyat from '@/components/CardAyat.vue'
+import ListSurat from '@/components/ListSurat.vue'
 
 export default {
-    components:{CardAyat},
+    components:{CardAyat, ListSurat},
 
     data() {
         return {

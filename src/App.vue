@@ -1,5 +1,5 @@
 <template>
-  <div class=" mx-auto bg-[#DEF5F6] ">
+  <div class="md:container mx-auto ">
     <!-- <nav>
       <router-link to="/">Home</router-link> |
       <router-link to="/about">About</router-link>

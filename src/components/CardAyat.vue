@@ -1,6 +1,6 @@
 <template>
     <div class="grid grid-cols-1 gap-4">
-     <div v-for="ayat in ayats" :key="ayat.id" class="flex flex-col bg-white p-4 rounded-xl">
+     <div v-for="ayat in ayats" :key="ayat.id" class="flex flex-col bg-white p-4 rounded-xl ">
         <div class="flex items-start justify-evenly w-full">
             <span class="relative flex items-center justify-center">
             <svg width="31" height="31" viewBox="0 0 31 31" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -8,7 +8,7 @@
             </svg>
             <span class="absolute text-center text-[12px]">{{ayat.nomor}}</span>
             </span>
-             <h2 class="text-primary text-2xl font-semibold text-end ml-auto">{{ayat.ar}}</h2>
+             <h2 class="text-primary text-2xl font-semibold text-end ml-auto leading-loose">{{ayat.ar}}</h2>
                 
         </div>
         <h3 class="text-green-800 italic font-medium text-end mt-4 text-sm">"{{ayat.tr}}”</h3>

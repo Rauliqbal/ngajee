@@ -10,13 +10,12 @@
           justify-center
           bg-gray-700 bg-opacity-50
           h-screen
-          max-w-md
           mx-auto
           px-5
           transition-all
         "
       >
-        <div class="max-w-2xl p-6 bg-white rounded-md shadow-xl transition-all">
+        <div class="max-w-md p-6 bg-white rounded-md shadow-xl transition-all">
           <div class="flex items-center justify-between">
             <h3 class="text-2xl font-semibold">PERHATIAN !!!</h3>
           </div>
