@@ -1,6 +1,6 @@
 <template>
   <div>
-    <ModalStarted class="hidden" />
+    <ModalStarted class="" />
     <header class="fixed left-0 right-0 top-0 z-20">
       <div class="bg-primary px-4 pb-6 relative shadow-md">
         <div class="grid grid-cols-3 py-6">
