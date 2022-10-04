@@ -28,7 +28,8 @@ My Mushaf Indonesia adalah Aplikasi Al - Qur'an Digital Berbasis Website App, Su
 
 ### Links
 
-- [Live site URL](https://ijuldev.github.io/bookshelf-app)
+- [Live in Vecel](https://mymushaf.vercel.app/)
+- [Live in Netlify](https://mymushaf.netlify.app/)
 
 ## My process
 
