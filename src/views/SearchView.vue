@@ -19,7 +19,7 @@
     </header>
 
     <div class="pt-24">
-      <form class="flex items-center relative">
+      <form class="flex items-center relative" @submit.prevent="setSurats">
         <input
           class="w-full py-3 px-5 border-2 border-primary focus:outline-none rounded-full focus:ring focus:ring-primary focus:border-transparent transition-all peer"
           type="text"
