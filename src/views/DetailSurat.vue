@@ -1,6 +1,5 @@
 <template>
    <main>
-      <PageLoader />
       <div class="px-4 pb-8 min-h-screen bg-[#DEF5F6]">
          <header class="z-30 fixed inset-x-0 bg-primary flex items-center justify-between py-6 px-4 shadow-md">
             <router-link to="/home">
@@ -64,10 +63,9 @@
 import axios from "axios";
 import CardAyat from "@/components/CardAyat.vue";
 import ListSurat from "@/components/ListSurat.vue";
-import PageLoader from "@/components/PageLoader.vue";
 
 export default {
-   components: { CardAyat, ListSurat, PageLoader },
+   components: { CardAyat, ListSurat },
 
    data() {
       return {
