@@ -1,9 +1,18 @@
 <template>
-  <div class="md:container mx-auto">
-    <!-- <nav>
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </nav> -->
-    <router-view />
-  </div>
+   <router-view v-slot="{ Component }">
+      <transition name="fade" mode="out-in">
+         <component :is="Component"></component>
+      </transition>
+   </router-view>
 </template>
+
+<style type="text/css">
+.fade-enter-active,
+.fade-leave-active {
+   transition: opacity 0.5s ease;
+}
+.fade-enter-from,
+.fade-leave-to {
+   opacity: 0;
+}
+</style>
