@@ -31,11 +31,11 @@
                   <div class="flex flex-col bg-primary py-8 px-6">
                      <h1 class="text-white text-2xl font-semibold">Daftar Surat</h1>
                   </div>
-                  <div class="flex flex-col pt-2 overflow-auto">
+                  <div class="flex flex-col px-3 pt-2 gap-2 overflow-auto">
                      <ListSurat />
                   </div>
 
-                  <div class="flex flex-col items-center justify-center mt-auto py-4">
+                  <div class="flex flex-col items-center justify-center mt-auto py-4 border-t">
                      <h3 class="text-base text-primary">Develop with</h3>
                      <h5 class="text-slate-500 text-sm">Raul Raisha</h5>
                   </div>
@@ -49,7 +49,7 @@
                   {{ surah.nama_latin }}<span class="text-base font-normal"> ({{ surah.arti }})</span>
                </h2>
                <h3 class="text-white mt-2">{{ surah.tempat_turun }} - {{ surah.jumlah_ayat }} ayat</h3>
-               <h4 class="text-[28px] text-white text-center mt-8">بِسْمِ اللّٰهِ الرَّحْمٰنِ الرَّحِيْمِ</h4>
+               <h4 class="text-[28px] text-white text-center mt-8 font-arab">بِسْمِ اللّٰهِ الرَّحْمٰنِ الرَّحِيْمِ</h4>
                <audio class="w-full h-8 mt-8" :src="surah.audio" controls></audio>
             </div>
          </div>

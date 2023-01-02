@@ -1,5 +1,5 @@
 <template>
-   <div class="bg-[#def5f6]">
+   <div class="min-h-screen bg-[#def5f6]">
       <header class="fixed left-0 right-0 top-0 z-20">
          <div class="bg-primary px-4 pb-6 relative shadow-md">
             <div class="grid grid-cols-3 py-6">
@@ -70,7 +70,7 @@
                </div>
                <h1 class="text-lg text-white font-semibold text-center">My Mushaf</h1>
             </div>
-            <h5 class="text-xl text-white text-end mb-4">السلام عليكم ورحمة الله وبركاته</h5>
+            <h5 class="text-xl text-white text-end mb-4 font-arab">السلام عليكم ورحمة الله وبركاته</h5>
             <!-- <input class="px-6 py-3 w-full rounded-full outline-none" type="search" name="search" placeholder="Cari surat..."> -->
             <router-link to="/search" class="px-6 py-3 bg-white rounded-full flex items-center justify-between">
                <span class="text-slate-400">Cari surat...</span>
@@ -90,7 +90,7 @@
          </div>
       </header>
 
-      <div class="pt-52 grid grid-cols-1 gap-3 mt-4 pb-8 px-4">
+      <div class="pt-48 grid grid-cols-1 gap-3 mt-4 pb-8 px-4">
          <div v-for="surat in surats" :key="surat.id">
             <CardSurat :surat="surat" />
          </div>

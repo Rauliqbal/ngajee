@@ -1,6 +1,6 @@
 <template>
-   <router-link @click="reloadPage" v-for="surat in surah" :key="surat.id" :to="'/surat/' + surat.nomor" class="flex items-center justify-between py-3 px-4 bg-white rounded-lg hover:bg-slate-300 transition-all duration-300 ease-out">
-      <div class="ml-4">
+   <router-link @click="reloadPage" v-for="surat in surah" :key="surat.id" :to="'/surat/' + surat.nomor" class="flex items-center justify-between py-2 px-3 bg-white rounded-lg hover:bg-slate-300 transition-all duration-300 ease-out">
+      <div>
          <h2 class="text-primary text-lg font-semibold">{{ surat.nama_latin }}</h2>
          <h3 class="text-[12px] text-slate-500">{{ surat.tempat_turun }} - {{ surat.jumlah_ayat }} ayat</h3>
       </div>
@@ -38,7 +38,7 @@ export default {
    },
    mounted() {
       axios
-         .get("https://api-mymushaf.herokuapp.com/surah")
+         .get("https://equran.id/api/surat")
          .then((response) => this.setSurah(response.data))
          .catch((error) => console.log(error + "Tidak dapat response"));
    },
