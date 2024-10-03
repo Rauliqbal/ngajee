@@ -1,11 +1,11 @@
-# My Mushaf Indonesia - Aplikasi Al - Qur'an Digital Berbahasa indonesia
+# Ngajee - Qur'an Digital Berbahasa indonesia
 
 My Mushaf Indonesia adalah Aplikasi Al - Qur'an Digital Berbasis Website App, Sumber utama dari data yang terdapat pada Aplikasi ini adalah Aplikasi Qur'an Kementerian Agama Republik Indonesia dan audio dari Qur'an Central. Semoga dapat dimanfaatkan sebaik-baiknya.
 
 
 ## Table of contents
 
-- [My Mushaf Indonesia - Aplikasi Al - Qur'an Digital Berbahasa indonesia](#my-mushaf-indonesia---aplikasi-al---quran-digital-berbahasa-indonesia)
+- [Ngajee - Aplikasi Al - Qur'an Digital Berbahasa indonesia](#my-mushaf-indonesia---aplikasi-al---quran-digital-berbahasa-indonesia)
   - [Table of contents](#table-of-contents)
   - [Overview](#overview)
     - [Screenshot](#screenshot)
