@@ -65,6 +65,7 @@ export default defineNuxtConfig({
   googleFonts: {
     families: {
       Poppins: [400, 500, 600],
+      Lateef: [400],
     },
   },
 });

@@ -9,17 +9,25 @@ function toggleTheme() {
   <div class="flex flex-row items-center justify-center">
     <button
       v-show="colorMode.preference === 'light'"
-      class="transition-transform duration-100 hover:scale-125"
+      class="transition-transform duration-100 hover:scale-125 flex items-center justify-center"
       @click="toggleTheme"
     >
-      <Icon name="solar:sun-line-duotone" style="color: black" />
+      <Icon
+        size="24"
+        name="solar:sun-line-duotone"
+        class="bg-dark dark:bg-white"
+      />
     </button>
     <button
       v-show="colorMode.preference === 'dark'"
-      class="transition-transform duration-100 hover:scale-125"
+      class="transition-transform duration-100 hover:scale-125 flex items-center justify-center"
       @click="toggleTheme"
     >
-      <Icon name="solar:moon-stars-bold-duotone" style="color: black" />
+      <Icon
+        size="24"
+        name="solar:moon-stars-bold-duotone"
+        class="bg-dark dark:bg-white"
+      />
     </button>
   </div>
 </template>

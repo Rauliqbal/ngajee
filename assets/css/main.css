@@ -4,12 +4,12 @@
 
 @layer base {
   body {
-    @apply font-poppins;
+    @apply font-poppins bg-[#f1f1f1] dark:bg-dark-primary;
   }
 }
 
 @layer components {
   .btn-primary {
-    @apply px-6 py-3 text-white font-semibold bg-primary rounded-full hover:bg-primary/70 active:scale-95 transition-all duration-300 ease-out;
+    @apply px-6 py-3 text-white font-semibold bg-primary dark:bg-teal-900 rounded-full hover:bg-primary/70 active:scale-95 transition-all duration-300 ease-out;
   }
 }

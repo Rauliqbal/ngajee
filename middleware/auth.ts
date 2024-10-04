@@ -1,6 +1,6 @@
 export default defineNuxtRouteMiddleware((to, from) => {
-  const username = localStorage.getItem("username");
-  if (username) {
-    return navigateTo("/home");
+  if (process.client) {
+    const username = localStorage.getItem("username");
+    if (username) return navigateTo("/dashboard");
   }
 });

@@ -16,7 +16,15 @@ export default {
         'dark-primary': '#113b3d'
       },
       fontFamily: {
-        poppins: ['Poppins', 'sans-serif']
+        poppins: ['Poppins', 'sans-serif'],
+        lateef: ['Lateef', "serif"]
+      },
+      container: {
+        center: true,
+        padding: '1rem',
+        screens: {
+          '2xl': '1180px'
+        }
       }
     },
   },
