@@ -1,20 +1,25 @@
 /** @type {import('tailwindcss').Config} */
-module.exports = {
-   darkMode: "class",
-   content: ["./index.html", "./src/**/*.{vue,js,ts,jsx,tsx}"],
-   theme: {
-      extend: {
-         colors: {
-            primary: "#3EA642",
-         },
-         fontFamily: {
-            poppins: ["poppins", "sans-serif"],
-            arab: ["Scheherazade New", "serif"],
-         },
-         backgroundImage: {
-            "header-pattern": "url('/src/assets/bg-image.webp')",
-         },
+export default {
+  darkMode: 'class',
+  content: [
+    "./components/**/*.{js,vue,ts}",
+    "./layouts/**/*.vue",
+    "./pages/**/*.vue",
+    "./plugins/**/*.{js,ts}",
+    "./app.vue",
+    "./error.vue",
+  ],
+  theme: {
+    extend: {
+      colors: {
+        primary: '#3aada9',
+        'dark-primary': '#113b3d'
       },
-   },
-   plugins: [],
-};
+      fontFamily: {
+        poppins: ['Poppins', 'sans-serif']
+      }
+    },
+  },
+  plugins: [],
+}
+

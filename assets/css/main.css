@@ -1,0 +1,15 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply font-poppins;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply px-6 py-3 text-white font-semibold bg-primary rounded-full hover:bg-primary/70 active:scale-95 transition-all duration-300 ease-out;
+  }
+}

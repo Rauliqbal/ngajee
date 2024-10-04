@@ -1,47 +1,75 @@
-# Ngajee - Qur'an Digital Berbahasa indonesia
+# Nuxt 3 Minimal Starter
 
-My Mushaf Indonesia adalah Aplikasi Al - Qur'an Digital Berbasis Website App, Sumber utama dari data yang terdapat pada Aplikasi ini adalah Aplikasi Qur'an Kementerian Agama Republik Indonesia dan audio dari Qur'an Central. Semoga dapat dimanfaatkan sebaik-baiknya.
+Look at the [Nuxt 3 documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
 
+## Setup
 
-## Table of contents
+Make sure to install the dependencies:
 
-- [Ngajee - Aplikasi Al - Qur'an Digital Berbahasa indonesia](#my-mushaf-indonesia---aplikasi-al---quran-digital-berbahasa-indonesia)
-  - [Table of contents](#table-of-contents)
-  - [Overview](#overview)
-    - [Screenshot](#screenshot)
-    - [Features](#features)
-    - [Links](#links)
-  - [My process](#my-process)
-    - [Built with](#built-with)
-  - [Author](#author)
+```bash
+# npm
+npm install
 
-## Overview
+# pnpm
+pnpm install
 
-### Screenshot
+# yarn
+yarn install
 
-![](./screenshot.png)
+# bun
+bun install
+```
 
-### Features
+## Development Server
 
-- Memiliki 114 Surat dan 30 Juz
-- Terdapat Audio MP3 Murottal
+Start the development server on `http://localhost:3000`:
 
-### Links
+```bash
+# npm
+npm run dev
 
-- [Live in Vecel](https://mymushaf.vercel.app/)
-- [Live in Netlify](https://mymushaf.netlify.app/)
+# pnpm
+pnpm run dev
 
-## My process
+# yarn
+yarn dev
 
-### Built with
+# bun
+bun run dev
+```
 
-- VUE JS
-- TAILWIND CSS
-- VUE ROUTER
-- PROGRESSIVE WEB APP
-- API [E-Quran](https://equran.id/apidev), 
+## Production
 
-## Author
+Build the application for production:
 
-- Front-End Developer - [@raul.iqbl_](https://www.instagram.com/raul.iqbl_/)
-- UI Designer - [@raisha.rmdnt_](https://www.instagram.com/raisha.rmdnt_/)
+```bash
+# npm
+npm run build
+
+# pnpm
+pnpm run build
+
+# yarn
+yarn build
+
+# bun
+bun run build
+```
+
+Locally preview production build:
+
+```bash
+# npm
+npm run preview
+
+# pnpm
+pnpm run preview
+
+# yarn
+yarn preview
+
+# bun
+bun run preview
+```
+
+Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
