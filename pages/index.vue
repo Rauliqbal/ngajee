@@ -9,7 +9,7 @@ definePageMeta({
 function setName() {
   if (process.client) {
     localStorage.setItem("username", name.value);
-    navigateTo("/home");
+    navigateTo("/dashboard");
   }
 }
 </script>
