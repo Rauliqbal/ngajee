@@ -27,7 +27,9 @@ const toggleTheme = () => {
       <div class="flex items-center justify-between">
         <div class="relative">
           <NuxtLink to="/">
-            <h1 class="text-lg md:text-2xl font-semibold dark:text-slate-100">
+            <h1
+              class="text-lg md:text-2xl font-semibold text-primary dark:text-slate-100"
+            >
               Ngajee.
             </h1>
           </NuxtLink>

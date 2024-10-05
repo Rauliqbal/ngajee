@@ -1,19 +1,19 @@
 <script setup>
 const { data: surat } = await useFetch("https://equran.id/api/v2/surat");
-// const userName = ref(getItem("username"));
-const userName = ref("username");
 
-// function getItem(item) {
-//   if (process.client) {
-//     return localStorage.getItem(item);
-//   } else {
-//     return undefined;
-//   }
-// }
+const userName = ref(getItem("username"));
+
+function getItem(item) {
+  if (process.client) {
+    return localStorage.getItem(item);
+  } else {
+    return undefined;
+  }
+}
 </script>
 <template>
   <div>
-    <HeaderNavbar />
+    <Navbar />
     <main class="pt-24 container">
       <div
         class="bg-primary dark:bg-teal-900 flex flex-col px-6 py-4 rounded-2xl shadow-md"
@@ -36,5 +36,6 @@ const userName = ref("username");
         />
       </div>
     </main>
+    <Footer />
   </div>
 </template>

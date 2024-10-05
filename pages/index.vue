@@ -2,14 +2,16 @@
 const isOpen = ref(true);
 const name = ref("");
 
-// definePageMeta({
-//   middleware: "auth",
-// });
+definePageMeta({
+  middleware: "auth",
+});
 
 function setName() {
   if (process.client) {
     localStorage.setItem("username", name.value);
     navigateTo("/dashboard");
+  } else {
+    return undefined;
   }
 }
 </script>
@@ -40,7 +42,6 @@ function setName() {
               type="text"
               placeholder="Masukkan Namamu"
               v-model="name"
-              required
             />
           </label>
 

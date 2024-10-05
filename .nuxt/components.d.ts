@@ -3,7 +3,8 @@ import type { DefineComponent, SlotsType } from 'vue'
 type IslandComponent<T extends DefineComponent> = T & DefineComponent<{}, {refresh: () => Promise<void>}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, SlotsType<{ fallback: { error: unknown } }>>
 interface _GlobalComponents {
       'CardSurat': typeof import("../components/CardSurat.vue")['default']
-    'HeaderNavbar': typeof import("../components/header/Navbar.vue")['default']
+    'Footer': typeof import("../components/Footer.vue")['default']
+    'Navbar': typeof import("../components/Navbar.vue")['default']
     'ToggleMode': typeof import("../components/toggleMode.vue")['default']
     'UAccordion': typeof import("../node_modules/@nuxt/ui/dist/runtime/components/elements/Accordion.vue")['default']
     'UAlert': typeof import("../node_modules/@nuxt/ui/dist/runtime/components/elements/Alert.vue")['default']
@@ -90,7 +91,8 @@ interface _GlobalComponents {
     'USlideovers': IslandComponent<typeof import("../node_modules/nuxt/dist/app/components/server-placeholder")['default']>
     'NuxtRouteAnnouncer': IslandComponent<typeof import("../node_modules/nuxt/dist/app/components/server-placeholder")['default']>
       'LazyCardSurat': typeof import("../components/CardSurat.vue")['default']
-    'LazyHeaderNavbar': typeof import("../components/header/Navbar.vue")['default']
+    'LazyFooter': typeof import("../components/Footer.vue")['default']
+    'LazyNavbar': typeof import("../components/Navbar.vue")['default']
     'LazyToggleMode': typeof import("../components/toggleMode.vue")['default']
     'LazyUAccordion': typeof import("../node_modules/@nuxt/ui/dist/runtime/components/elements/Accordion.vue")['default']
     'LazyUAlert': typeof import("../node_modules/@nuxt/ui/dist/runtime/components/elements/Alert.vue")['default']
@@ -183,7 +185,8 @@ declare module 'vue' {
 }
 
 export const CardSurat: typeof import("../components/CardSurat.vue")['default']
-export const HeaderNavbar: typeof import("../components/header/Navbar.vue")['default']
+export const Footer: typeof import("../components/Footer.vue")['default']
+export const Navbar: typeof import("../components/Navbar.vue")['default']
 export const ToggleMode: typeof import("../components/toggleMode.vue")['default']
 export const UAccordion: typeof import("../node_modules/@nuxt/ui/dist/runtime/components/elements/Accordion.vue")['default']
 export const UAlert: typeof import("../node_modules/@nuxt/ui/dist/runtime/components/elements/Alert.vue")['default']
@@ -270,7 +273,8 @@ export const UModals: IslandComponent<typeof import("../node_modules/nuxt/dist/a
 export const USlideovers: IslandComponent<typeof import("../node_modules/nuxt/dist/app/components/server-placeholder")['default']>
 export const NuxtRouteAnnouncer: IslandComponent<typeof import("../node_modules/nuxt/dist/app/components/server-placeholder")['default']>
 export const LazyCardSurat: typeof import("../components/CardSurat.vue")['default']
-export const LazyHeaderNavbar: typeof import("../components/header/Navbar.vue")['default']
+export const LazyFooter: typeof import("../components/Footer.vue")['default']
+export const LazyNavbar: typeof import("../components/Navbar.vue")['default']
 export const LazyToggleMode: typeof import("../components/toggleMode.vue")['default']
 export const LazyUAccordion: typeof import("../node_modules/@nuxt/ui/dist/runtime/components/elements/Accordion.vue")['default']
 export const LazyUAlert: typeof import("../node_modules/@nuxt/ui/dist/runtime/components/elements/Alert.vue")['default']
