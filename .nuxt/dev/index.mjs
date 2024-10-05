@@ -3,7 +3,7 @@ import { tmpdir } from 'node:os';
 import { join } from 'node:path';
 import { mkdirSync } from 'node:fs';
 import { parentPort, threadId } from 'node:worker_threads';
-import { defineEventHandler, handleCacheHeaders, splitCookiesString, isEvent, createEvent, fetchWithEvent, getRequestHeader, eventHandler, setHeaders, sendRedirect, proxyRequest, createError, setResponseHeader, send, getResponseStatus, setResponseStatus, setResponseHeaders, getRequestHeaders, getQuery as getQuery$1, getRequestURL, createApp, createRouter as createRouter$1, toNodeListener, lazyEventHandler, getRouterParam, readBody, getResponseStatusText } from 'file:///home/rauliqbal/Documents/PROJECT/WEBSITE/ngajee/node_modules/h3/dist/index.mjs';
+import { defineEventHandler, handleCacheHeaders, splitCookiesString, isEvent, createEvent, fetchWithEvent, getRequestHeader, eventHandler, setHeaders, sendRedirect, proxyRequest, createError, setResponseHeader, send, getResponseStatus, setResponseStatus, setResponseHeaders, getRequestHeaders, getQuery as getQuery$1, getRequestURL, lazyEventHandler, useBase, createApp, createRouter as createRouter$1, toNodeListener, getRouterParam, readBody, getResponseStatusText } from 'file:///home/rauliqbal/Documents/PROJECT/WEBSITE/ngajee/node_modules/h3/dist/index.mjs';
 import { getRequestDependencies, getPreloadLinks, getPrefetchLinks, createRenderer } from 'file:///home/rauliqbal/Documents/PROJECT/WEBSITE/ngajee/node_modules/vue-bundle-renderer/dist/runtime.mjs';
 import { stringify, uneval } from 'file:///home/rauliqbal/Documents/PROJECT/WEBSITE/ngajee/node_modules/devalue/index.js';
 import destr from 'file:///home/rauliqbal/Documents/PROJECT/WEBSITE/ngajee/node_modules/destr/dist/index.mjs';
@@ -25,9 +25,11 @@ import { consola } from 'file:///home/rauliqbal/Documents/PROJECT/WEBSITE/ngajee
 import { getContext } from 'file:///home/rauliqbal/Documents/PROJECT/WEBSITE/ngajee/node_modules/unctx/dist/index.mjs';
 import { captureRawStackTrace, parseRawStackTrace } from 'file:///home/rauliqbal/Documents/PROJECT/WEBSITE/ngajee/node_modules/errx/dist/index.js';
 import { isVNode, version, unref } from 'file:///home/rauliqbal/Documents/PROJECT/WEBSITE/ngajee/node_modules/vue/index.mjs';
-import { basename } from 'file:///home/rauliqbal/Documents/PROJECT/WEBSITE/ngajee/node_modules/pathe/dist/index.mjs';
+import { basename, isAbsolute } from 'file:///home/rauliqbal/Documents/PROJECT/WEBSITE/ngajee/node_modules/pathe/dist/index.mjs';
 import { getIcons } from 'file:///home/rauliqbal/Documents/PROJECT/WEBSITE/ngajee/node_modules/@iconify/utils/lib/index.mjs';
 import { collections } from 'file:///home/rauliqbal/Documents/PROJECT/WEBSITE/ngajee/.nuxt/nuxt-icon-server-bundle.mjs';
+import { fileURLToPath } from 'node:url';
+import { ipxFSStorage, ipxHttpStorage, createIPX, createIPXH3Handler } from 'file:///home/rauliqbal/Documents/PROJECT/WEBSITE/ngajee/node_modules/ipx/dist/index.mjs';
 import { createServerHead as createServerHead$1, CapoPlugin } from 'file:///home/rauliqbal/Documents/PROJECT/WEBSITE/ngajee/node_modules/unhead/dist/index.mjs';
 import { defineHeadPlugin } from 'file:///home/rauliqbal/Documents/PROJECT/WEBSITE/ngajee/node_modules/@unhead/shared/dist/index.mjs';
 
@@ -326,6 +328,18 @@ const _inlineRuntimeConfig = {
   "public": {},
   "icon": {
     "serverKnownCssClasses": []
+  },
+  "ipx": {
+    "baseURL": "/_ipx",
+    "alias": {},
+    "fs": {
+      "dir": [
+        "/home/rauliqbal/Documents/PROJECT/WEBSITE/ngajee/public"
+      ]
+    },
+    "http": {
+      "domains": []
+    }
   }
 };
 const envOptions = {
@@ -1151,11 +1165,30 @@ const _m57JWB = defineCachedEventHandler(async (event) => {
   // 1 week
 });
 
+const _kTOFfL = lazyEventHandler(() => {
+  const opts = useRuntimeConfig().ipx || {};
+  const fsDir = opts?.fs?.dir ? (Array.isArray(opts.fs.dir) ? opts.fs.dir : [opts.fs.dir]).map((dir) => isAbsolute(dir) ? dir : fileURLToPath(new URL(dir, globalThis._importMeta_.url))) : void 0;
+  const fsStorage = opts.fs?.dir ? ipxFSStorage({ ...opts.fs, dir: fsDir }) : void 0;
+  const httpStorage = opts.http?.domains ? ipxHttpStorage({ ...opts.http }) : void 0;
+  if (!fsStorage && !httpStorage) {
+    throw new Error("IPX storage is not configured!");
+  }
+  const ipxOptions = {
+    ...opts,
+    storage: fsStorage || httpStorage,
+    httpStorage
+  };
+  const ipx = createIPX(ipxOptions);
+  const ipxHandler = createIPXH3Handler(ipx);
+  return useBase(opts.baseURL, ipxHandler);
+});
+
 const _lazy_q4KUWj = () => Promise.resolve().then(function () { return renderer$1; });
 
 const handlers = [
   { route: '/__nuxt_error', handler: _lazy_q4KUWj, lazy: true, middleware: false, method: undefined },
   { route: '/api/_nuxt_icon/:collection', handler: _m57JWB, lazy: false, middleware: false, method: undefined },
+  { route: '/_ipx/**', handler: _kTOFfL, lazy: false, middleware: false, method: undefined },
   { route: '/**', handler: _lazy_q4KUWj, lazy: true, middleware: false, method: undefined }
 ];
 

@@ -20,6 +20,7 @@ export default defineNuxtConfig({
     "@nuxt/ui",
     "@nuxtjs/color-mode",
     "@nuxtjs/google-fonts",
+    "@nuxt/image",
   ],
   pwa: {
     registerType: "autoUpdate",

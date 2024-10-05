@@ -98,6 +98,12 @@
       "#color-mode-options": [
         "./color-mode-options.mjs"
       ],
+      "#image": [
+        "../node_modules/@nuxt/image/dist/runtime"
+      ],
+      "#image/*": [
+        "../node_modules/@nuxt/image/dist/runtime/*"
+      ],
       "#vue-router": [
         "../node_modules/vue-router"
       ],
@@ -111,7 +117,7 @@
         "./tailwind.config/*"
       ],
       "#app-manifest": [
-        "./manifest/meta/dev"
+        "./manifest/meta/dev.json"
       ],
       "#build": [
         "."
@@ -167,6 +173,8 @@
     "../node_modules/@nuxt/ui/dist/runtime",
     "../node_modules/@nuxtjs/google-fonts/runtime",
     "../node_modules/@nuxtjs/google-fonts/dist/runtime",
+    "../node_modules/@nuxt/image/runtime",
+    "../node_modules/@nuxt/image/dist/runtime",
     "../node_modules/@nuxt/devtools/runtime",
     "../node_modules/@nuxt/devtools/dist/runtime",
     "../node_modules/@nuxt/telemetry/runtime",
@@ -189,6 +197,8 @@
     "../node_modules/@nuxt/ui/dist/runtime/server",
     "../node_modules/@nuxtjs/google-fonts/runtime/server",
     "../node_modules/@nuxtjs/google-fonts/dist/runtime/server",
+    "../node_modules/@nuxt/image/runtime/server",
+    "../node_modules/@nuxt/image/dist/runtime/server",
     "../node_modules/@nuxt/devtools/runtime/server",
     "../node_modules/@nuxt/devtools/dist/runtime/server",
     "../node_modules/@nuxt/telemetry/runtime/server",

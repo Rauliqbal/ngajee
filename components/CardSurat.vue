@@ -1,11 +1,15 @@
 <script setup>
 defineProps({
-  surat: String,
+  nomor: Number,
+  nama: String,
+  namaLatin: String,
+  tempatTurun: String,
+  jumlahAyat: Number,
 });
 </script>
 <template>
   <NuxtLink
-    :to="'/surat/' + surat.nomor"
+    :to="'/surat/' + nomor"
     class="flex items-center md:flex-col md:items-start py-3 px-4 bg-white dark:bg-teal-900 rounded-lg shadow-md active:bg-slate-300 transition-all duration-300 ease-out"
   >
     <span class="relative flex items-center justify-center">
@@ -22,20 +26,20 @@ defineProps({
           stroke-width="2"
         />
       </svg>
-      <span class="absolute text-center text-[12px]">{{ surat.nomor }}</span>
+      <span class="absolute text-center text-[12px]">{{ nomor }}</span>
     </span>
 
     <div class="w-full flex items-center justify-between mt-4">
       <div class="ml-4 md:ml-0">
         <h2 class="text-primary dark:text-white text-lg font-semibold">
-          {{ surat.namaLatin }}
+          {{ namaLatin }}
         </h2>
         <h3 class="text-[12px] text-slate-500 dark:text-slate-300">
-          {{ surat.tempatTurun }} - {{ surat.jumlahAyat }} ayat
+          {{ tempatTurun }} - {{ jumlahAyat }} ayat
         </h3>
       </div>
       <h2 class="text-primary dark:text-white text-4xl font-lateef">
-        {{ surat.nama }}
+        {{ nama }}
       </h2>
     </div>
   </NuxtLink>
