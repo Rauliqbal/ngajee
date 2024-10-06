@@ -16,7 +16,7 @@ function getItem(item) {
     <Navbar />
     <main class="pt-24 container">
       <div
-        class="bg-primary dark:bg-teal-900 flex flex-col px-6 py-4 rounded-2xl shadow-md"
+        class="bg-gradient-to-br from-primary to-emerald-700 dark:bg-gradient-to-br dark:from-teal-800 dark:to-teal-900 p-5 md:p-8 flex flex-col px-6 py-4 rounded-2xl shadow-md"
       >
         <p class="text-xl md:text-2xl text-white">Assalamulaikum</p>
         <p class="text-xl md:text-3xl text-white font-semibold mt-1">
