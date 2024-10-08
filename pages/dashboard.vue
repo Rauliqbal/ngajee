@@ -22,7 +22,16 @@ function getItem(item) {
         <p class="text-xl md:text-3xl text-white font-semibold mt-1">
           {{ userName }}
         </p>
+
+        <!-- <UInput
+          color="primary"
+          variant="outline"
+          placeholder="Search..."
+          v-model="filter"
+        /> -->
       </div>
+
+      {{ list }}
 
       <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6 mt-10">
         <CardSurat

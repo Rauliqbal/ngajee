@@ -4,6 +4,7 @@ defineProps({
   arti: String,
   tempatTurun: String,
   jumlahAyat: Number,
+  audioFull: String,
 });
 </script>
 <template>
@@ -18,5 +19,11 @@ defineProps({
     <p class="text-sm text-white dark:text-slate-300">
       {{ tempatTurun }} - {{ jumlahAyat }} Ayat
     </p>
+    <audio
+      class="w-full rounded-xl bg-primary dark:bg-dark-primary mt-4"
+      controls
+    >
+      <source :src="audioFull" type="audio/mp3" />
+    </audio>
   </div>
 </template>

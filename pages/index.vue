@@ -2,9 +2,9 @@
 const isOpen = ref(true);
 const name = ref("");
 
-// definePageMeta({
-//   middleware: "auth",
-// });
+definePageMeta({
+  middleware: "auth",
+});
 
 function setName() {
   if (process.client) {

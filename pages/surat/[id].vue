@@ -1,8 +1,6 @@
 <script setup>
 const { id } = useRoute().params;
 const { data: surat } = await useFetch(`https://equran.id/api/v2/surat/${id}`);
-
-console.log(surat);
 </script>
 <template>
   <div>
@@ -12,8 +10,8 @@ console.log(surat);
         :arti="surat.data.arti"
         :tempat-turun="surat.data.tempatTurun"
         :jumlah-ayat="surat.data.jumlahAyat"
+        :audio-full="surat.data.audioFull[Object.keys(surat.data.audioFull)[0]]"
       />
-
       <div class="grid gap-5 mt-10">
         <LazyDetailCardAyat
           v-for="i in surat.data.ayat"
