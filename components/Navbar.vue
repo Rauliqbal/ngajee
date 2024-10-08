@@ -20,12 +20,12 @@ const toggleTheme = () => {
 </script>
 
 <template>
-  <header
-    class="fixed inset-x-0 z-20 py-6 transition-all bg-white dark:bg-dark-primary"
+  <nav
+    class="fixed inset-x-0 z-20 py-6 transition-all bg-white dark:bg-dark-primary shadow-md"
   >
     <div class="container">
-      <div class="flex items-center justify-between">
-        <div class="relative">
+      <div class="flex items-center">
+        <div class="relative flex items-center justify-between w-full">
           <NuxtLink to="/">
             <h1
               class="text-lg md:text-2xl font-semibold text-primary dark:text-slate-100"
@@ -33,75 +33,63 @@ const toggleTheme = () => {
               Ngajee.
             </h1>
           </NuxtLink>
-        </div>
-        <div class="flex items-center">
-          <div class="md:hidden mr-4">
+          <div class="md:hidden">
             <ToggleMode />
           </div>
-          <input
-            type="checkbox"
-            class="peer hidden"
-            name="hamburger"
-            id="hamburger"
-          />
-          <label
-            for="hamburger"
-            class="relative peer-checked:hamburger z-30 block cursor-pointer md:hidden"
-          >
-            <span
-              class="duration-200 inline-block w-7 focus:w-0 h-1 bg-black after:bg-black before:bg-black dark:bg-slate-400 dark:after:bg-slate-400 dark:before:bg-slate-400 rounded-xl after:rounded-xl before:rounded-xl"
-            ></span>
-          </label>
-          <div
-            @click="showHide"
-            class="absolute inset-0 h-screen bg-gray-900/30 opacity-0 hidden peer-checked:opacity-100 peer-checked:block transition-all duration-300 md:peer-checked:hidden"
-          ></div>
-          <div
-            class="peer-checked:translate-x-0 w-72 sm:w-96 fixed top-0 right-0 bottom-0 translate-x-full transition duration-300 md:w-auto md:static md:translate-x-0 z-20 ease-out"
-          >
-            <div class="flex flex-col md:items-center md:flex-row h-full">
-              <ul
-                class="bg-white dark:bg-teal-800 dark:md:bg-transparent md:bg-transparent flex items-center px-7 pt-28 md:pb-0 pb-[38rem] space-y-8 md:px-0 md:space-y-0 flex-col md:flex-row md:space-x-10 md:pt-0"
-              >
-                <li>
-                  <NuxtLink
-                    @click="showHide"
-                    class="dark:text-slate-300 capitalize tracking-wide hover:text-primary transition ease-out duration-200 text-gray-800"
-                    to="/dashboard"
-                    >Quran</NuxtLink
-                  >
-                </li>
-                <li>
-                  <NuxtLink
-                    @click="showHide"
-                    class="dark:text-slate-300 capitalize tracking-wide hover:text-primary transition ease-out duration-200 text-gray-800"
-                    to="/#"
-                    >Doa doa</NuxtLink
-                  >
-                </li>
+        </div>
 
-                <li class="text-slate-600 dark:text-white hidden md:block">
-                  |
-                </li>
-                <li class="hidden md:block">
-                  <ToggleMode />
-                </li>
-                <li>
-                  <NuxtLink
-                    to="https://github.com/Rauliqbal/ngajee"
-                    target="_blank"
-                    rel="external"
-                    class="btn-primary text-sm"
-                    >Give Star</NuxtLink
-                  >
-                </li>
-              </ul>
-            </div>
+        <!-- Bottom Nav -->
+        <div
+          class="fixed md:relative bottom-4 inset-x-4 md:bottom-0 md:inset-x-0 md:w-3/4"
+        >
+          <div class="">
+            <ul
+              class="bg-white dark:bg-teal-800/40 backdrop-blur-sm dark:md:bg-transparent md:bg-transparent flex items-center justify-around md:justify-center gap-4 p-5 md:p-0 rounded-xl shadow-lg md:shadow-none md:border-none border dark:border-teal-700"
+            >
+              <li>
+                <NuxtLink
+                  class="dark:text-slate-300 capitalize tracking-wide hover:text-primary transition ease-out duration-200 text-gray-800"
+                  to="/dashboard"
+                >
+                  <span class="hidden md:block">Quran</span>
+                  <Icon size="24" name="hugeicons:quran-01" class="md:hidden" />
+                </NuxtLink>
+              </li>
+              <li>
+                <NuxtLink
+                  class="dark:text-slate-300 capitalize tracking-wide hover:text-primary transition ease-out duration-200 text-gray-800"
+                  to="/#"
+                >
+                  <span class="hidden md:block">Doa Harian</span>
+                  <Icon
+                    size="24"
+                    name="hugeicons:book-open-01"
+                    class="md:hidden"
+                /></NuxtLink>
+              </li>
+              <li class="text-slate-600 dark:text-white hidden md:block">|</li>
+              <li class="hidden md:block">
+                <ToggleMode />
+              </li>
+              <li>
+                <NuxtLink
+                  to="https://github.com/Rauliqbal/ngajee"
+                  target="_blank"
+                  rel="external"
+                >
+                  <button class="btn-primary text-sm hidden md:block">
+                    Give Star
+                  </button>
+
+                  <Icon size="24" name="hugeicons:star" class="md:hidden" />
+                </NuxtLink>
+              </li>
+            </ul>
           </div>
         </div>
       </div>
     </div>
-  </header>
+  </nav>
 </template>
 
 <style>

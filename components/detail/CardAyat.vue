@@ -1,16 +1,14 @@
 <script setup>
 defineProps({
-  nomor: Number,
-  nama: String,
-  namaLatin: String,
-  tempatTurun: String,
-  jumlahAyat: Number,
+  nomorAyat: Number,
+  teksArab: String,
+  teksLatin: String,
+  teksIndonesia: String,
 });
 </script>
 <template>
-  <NuxtLink
-    :to="'/surat/' + nomor"
-    class="flex items-center md:flex-col md:items-start py-3 px-4 bg-white dark:bg-teal-900 rounded-lg shadow-md active:bg-slate-300 transition-all duration-300 ease-out"
+  <figure
+    class="flex flex-col items-start py-3 px-4 md:px-5 md:py-7 bg-white dark:bg-teal-900 rounded-lg shadow-md active:bg-slate-300 transition-all duration-300 ease-out"
   >
     <span class="relative flex items-center justify-center">
       <svg
@@ -26,21 +24,25 @@ defineProps({
           stroke-width="2"
         />
       </svg>
-      <span class="absolute text-center text-[12px]">{{ nomor }}</span>
+      <span class="absolute text-center text-[12px]">{{ nomorAyat }}</span>
     </span>
 
-    <div class="w-full flex items-center justify-between md:smt-4">
-      <div class="ml-4 md:ml-0">
-        <h2 class="text-primary dark:text-white text-lg font-semibold">
-          {{ namaLatin }}
-        </h2>
-        <h3 class="text-[12px] text-slate-500 dark:text-slate-300">
-          {{ tempatTurun }} - {{ jumlahAyat }} ayat
-        </h3>
-      </div>
-      <h2 class="text-primary dark:text-white text-4xl font-lateef">
-        {{ nama }}
-      </h2>
+    <div class="mt-4 w-full">
+      <p
+        class="text-primary dark:text-white text-3xl md:text-4xl font-lateef text-right"
+      >
+        {{ teksArab }}
+      </p>
+      <p
+        class="text-sm text-slate-500 dark:text-slate-300 mt-8 tracking-wide leading-relaxed"
+      >
+        {{ teksLatin }}
+      </p>
+      <p
+        class="text-sm md:text-base dark:text-white mt-4 tracking-wide leading-relaxed"
+      >
+        {{ teksIndonesia }}
+      </p>
     </div>
-  </NuxtLink>
+  </figure>
 </template>

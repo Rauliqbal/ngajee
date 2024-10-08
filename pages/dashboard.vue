@@ -14,7 +14,7 @@ function getItem(item) {
 <template>
   <div>
     <Navbar />
-    <main class="pt-24 container">
+    <main class="pt-28 pb-24 md:pb-0 container">
       <div
         class="bg-gradient-to-br from-primary to-emerald-700 dark:bg-gradient-to-br dark:from-teal-800 dark:to-teal-900 p-5 md:p-8 flex flex-col px-6 py-4 rounded-2xl shadow-md"
       >

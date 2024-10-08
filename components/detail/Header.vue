@@ -7,7 +7,7 @@ defineProps({
 });
 </script>
 <template>
-  <header
+  <div
     class="bg-gradient-to-br from-primary to-emerald-700 dark:bg-gradient-to-br dark:from-teal-800 dark:to-teal-900 p-5 md:p-8 rounded-2xl"
   >
     <h2 class="text-white text-xl font-semibold">
@@ -18,5 +18,5 @@ defineProps({
     <p class="text-sm text-white dark:text-slate-300">
       {{ tempatTurun }} - {{ jumlahAyat }} Ayat
     </p>
-  </header>
+  </div>
 </template>

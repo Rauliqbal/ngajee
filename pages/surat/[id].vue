@@ -13,6 +13,17 @@ console.log(surat);
         :tempat-turun="surat.data.tempatTurun"
         :jumlah-ayat="surat.data.jumlahAyat"
       />
+
+      <div class="grid gap-5 mt-10">
+        <LazyDetailCardAyat
+          v-for="i in surat.data.ayat"
+          :key="i"
+          :nomor-ayat="i.nomorAyat"
+          :teks-arab="i.teksArab"
+          :teks-latin="i.teksLatin"
+          :teks-indonesia="i.teksIndonesia"
+        />
+      </div>
     </main>
     <LazyFooter />
   </div>
