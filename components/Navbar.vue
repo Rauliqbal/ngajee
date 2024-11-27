@@ -39,7 +39,8 @@ const toggleTheme = () => {
                      <li>
                         <NuxtLink
                            :class="{
-                              'text-primary': $route.path === '/quran',
+                              'text-primary dark:text-primary':
+                                 $route.path === '/quran',
                            }"
                            class="tracking-wide text-gray-800 capitalize transition duration-200 ease-out dark:text-slate-300 hover:text-primary"
                            to="/quran"
@@ -55,7 +56,8 @@ const toggleTheme = () => {
                      <li>
                         <NuxtLink
                            :class="{
-                              'text-primary': $route.path === '/doa',
+                              'text-primary dark:text-primary':
+                                 $route.path === '/doa',
                            }"
                            class="tracking-wide text-gray-800 capitalize transition duration-200 ease-out dark:text-slate-300 hover:text-primary"
                            to="/#"
@@ -65,7 +67,25 @@ const toggleTheme = () => {
                               size="24"
                               name="hugeicons:book-open-01"
                               class="md:hidden"
-                        /></NuxtLink>
+                           />
+                        </NuxtLink>
+                     </li>
+                     <li>
+                        <NuxtLink
+                           :class="{
+                              'text-primary dark:text-primary':
+                                 $route.path === '/doa',
+                           }"
+                           class="tracking-wide text-gray-800 capitalize transition duration-200 ease-out dark:text-slate-300 hover:text-primary"
+                           to="/#"
+                        >
+                           <span class="hidden md:block">Profil</span>
+                           <Icon
+                              size="24"
+                              name="hugeicons:user"
+                              class="md:hidden"
+                           />
+                        </NuxtLink>
                      </li>
                      <li class="hidden text-slate-600 dark:text-white md:block">
                         |
@@ -73,7 +93,7 @@ const toggleTheme = () => {
                      <li class="hidden md:block">
                         <ToggleMode />
                      </li>
-                     <li>
+                     <li class="hidden md:block">
                         <NuxtLink
                            to="https://github.com/Rauliqbal/ngajee"
                            target="_blank"
