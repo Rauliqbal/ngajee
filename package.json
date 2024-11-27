@@ -1,5 +1,6 @@
 {
-  "name": "nuxt-app",
+  "name": "ngajee",
+  "description": "📖 Al-Quran Digital dengan terjemah bahasa Indonesia",
   "private": true,
   "type": "module",
   "scripts": {
