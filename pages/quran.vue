@@ -14,7 +14,7 @@ function getItem(item) {
 <template>
    <div>
       <Navbar />
-      <main class="container pb-24 pt-28 md:pb-0">
+      <main class="container pb-4 pt-28">
          <Greeting userName="Rauliqbal" />
 
          <div

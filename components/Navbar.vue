@@ -33,7 +33,7 @@
                   class="peer-checked:translate-x-0 fixed inset-0 w-[calc(100%-60px)] translate-x-[-100%] bg-white md:bg-transparent transition duration-300 md:w-auto md:static md:translate-x-0 z-20"
                >
                   <div
-                     class="flex flex-col md:items-center justify-between md:flex-row px-4 h-full pb-4"
+                     class="flex flex-col md:items-center justify-between md:flex-row px-4 h-full pb-4 md:pb-0"
                   >
                      <ul
                         class="bg-white flex px-4 pt-28 md:pb-0 space-y-5 md:px-0 md:space-y-0 flex-col md:flex-row md:space-x-12 md:pt-0"
