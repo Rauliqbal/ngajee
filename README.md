@@ -1,40 +1,75 @@
-# Ngajee - Qur'an Digital Berbahasa indonesia
+# Nuxt Minimal Starter
 
-Ngajee - Al - Qur'an Indonesia Berbasis Website App, Sumber utama dari data yang terdapat pada Aplikasi ini adalah Aplikasi Qur'an Kementerian Agama Republik Indonesia dan audio dari Qur'an Central. Semoga dapat dimanfaatkan sebaik-baiknya.
+Look at the [Nuxt documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
 
-## Table of contents
+## Setup
 
--  [Ngajee - Aplikasi Al - Qur'an Digital Berbahasa indonesia](#my-mushaf-indonesia---aplikasi-al---quran-digital-berbahasa-indonesia)
-   -  [Table of contents](#table-of-contents)
-   -  [Overview](#overview)
-      -  [Screenshot](#screenshot)
-      -  [Features](#features)
-      -  [Links](#links)
-   -  [My process](#my-process)
-      -  [Built with](#built-with)
-   -  [Author](#author)
+Make sure to install dependencies:
 
-## Overview
+```bash
+# npm
+npm install
 
-### Screenshot
+# pnpm
+pnpm install
 
-![](./screenshot.png)
+# yarn
+yarn install
 
-### Features
+# bun
+bun install
+```
 
--  Memiliki 114 Surat dan 30 Juz
--  Terdapat Audio MP3 Murottal
+## Development Server
 
-### Links
+Start the development server on `http://localhost:3000`:
 
--  [Live](https://ngajee.web.id/)
--  [Live in Netlify](https://mymushaf.netlify.app/)
+```bash
+# npm
+npm run dev
 
-## My process
+# pnpm
+pnpm dev
 
-### Built with
+# yarn
+yarn dev
 
--  NUXT
--  TAILWIND CSS
--  PROGRESSIVE WEB APP
--  API [E-Quran](https://equran.id/apidev/v2),
+# bun
+bun run dev
+```
+
+## Production
+
+Build the application for production:
+
+```bash
+# npm
+npm run build
+
+# pnpm
+pnpm build
+
+# yarn
+yarn build
+
+# bun
+bun run build
+```
+
+Locally preview production build:
+
+```bash
+# npm
+npm run preview
+
+# pnpm
+pnpm preview
+
+# yarn
+yarn preview
+
+# bun
+bun run preview
+```
+
+Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.

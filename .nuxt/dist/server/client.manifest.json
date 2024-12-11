@@ -7,12 +7,12 @@
     "module": true,
     "resourceType": "script"
   },
-  "/home/rauliqbal/Documents/PROJECT/WEBSITE/ngajee/node_modules/nuxt/dist/app/entry.js": {
+  "/home/rauliqbal/Documents/PROJECT/WEBSITE/ngajee-app/node_modules/nuxt/dist/app/entry.js": {
     "resourceType": "script",
     "module": true,
     "prefetch": true,
     "preload": true,
     "isEntry": true,
-    "file": "/home/rauliqbal/Documents/PROJECT/WEBSITE/ngajee/node_modules/nuxt/dist/app/entry.js"
+    "file": "/home/rauliqbal/Documents/PROJECT/WEBSITE/ngajee-app/node_modules/nuxt/dist/app/entry.js"
   }
 }

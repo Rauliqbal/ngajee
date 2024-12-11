@@ -13,7 +13,6 @@ function getItem(item) {
 </script>
 <template>
    <div>
-      <Navbar />
       <main class="container pb-24 pt-28 md:pb-0">
          <div
             class="flex flex-col p-5 px-6 py-4 shadow-md bg-gradient-to-br from-primary to-emerald-700 dark:bg-gradient-to-br dark:from-teal-800 dark:to-teal-900 md:p-8 rounded-2xl"

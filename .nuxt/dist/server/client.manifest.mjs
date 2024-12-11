@@ -1,1 +1,1 @@
-export { default } from "file:///home/rauliqbal/Documents/PROJECT/WEBSITE/ngajee/node_modules/@nuxt/vite-builder/dist/runtime/client.manifest.mjs"
+export { default } from "file:///home/rauliqbal/Documents/PROJECT/WEBSITE/ngajee-app/node_modules/@nuxt/vite-builder/dist/runtime/client.manifest.mjs"

@@ -1,72 +1,28 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
-  compatibilityDate: "2024-04-03",
-  devtools: { enabled: true },
-  app: {
-    pageTransition: { name: "page", mode: "out-in" },
-    head: {
-      title: "Ngajee - Al Quran Indonesia",
-    },
-  },
-  css: ["~/assets/css/main.css"],
-  postcss: {
-    plugins: {
-      tailwindcss: {},
-      autoprefixer: {},
-    },
-  },
-  modules: [
-    "@vite-pwa/nuxt",
-    "@nuxt/ui",
-    "@nuxtjs/color-mode",
-    "@nuxtjs/google-fonts",
-    "@nuxt/image",
-  ],
-  pwa: {
-    registerType: "autoUpdate",
-    manifest: {
-      name: "Ngajee - Alquran Bahasa Indonesia",
-      short_name: "Ngajee",
-      description: "Aplikasi Al Qur'an dengan terjemah bahasa Indonesias",
-      theme_color: "#3aada9",
-      icons: [
-        {
-          src: "icons/apple-icon-60x60.png",
-          sizes: "60x60",
-          type: "image/png",
-        },
-        {
-          src: "icons/apple-touch-icon-76x76.png",
-          sizes: "76x76",
-          type: "image/png",
-        },
-        {
-          src: "icons/android-chrome-192x192.png",
-          sizes: "192x192",
-          type: "image/png",
-        },
-        {
-          src: "icons/android-chrome-512x512.png",
-          sizes: "512x512",
-          type: "image/png",
-        },
-      ],
-    },
-    workbox: {
-      navigateFallback: "/",
-    },
-    devOptions: {
-      enabled: true,
-      type: "module",
-    },
-  },
-  colorMode: {
-    preference: "light",
-  },
-  googleFonts: {
-    families: {
-      Poppins: [400, 500, 600],
-      Lateef: [400],
-    },
-  },
+   compatibilityDate: "2024-11-01",
+   devtools: { enabled: true },
+   css: ["~/assets/css/main.css"],
+   postcss: {
+      plugins: {
+         tailwindcss: {},
+         autoprefixer: {},
+      },
+   },
+   app: {
+      head: {
+         charset: "utf-8",
+         viewport: "width=device-width, initial-scale=1",
+         link: [
+            {
+               rel: "preconnect",
+               href: "https://fonts.googleapis.com",
+            },
+            {
+               rel: "stylesheet",
+               href: "https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Rakkas&display=swap",
+            },
+         ],
+      },
+   },
 });
