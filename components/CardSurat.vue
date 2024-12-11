@@ -9,7 +9,7 @@ defineProps({
 </script>
 <template>
    <div
-      class="py-4 flex justify-between items-center gap-4 md:px-5 md:bg-white md:rounded-xl"
+      class="py-4 flex justify-between items-center md:items-end gap-4 md:px-5 md:bg-white md:rounded-xl"
    >
       <div class="flex items-center lg:flex-col lg:items-start gap-2">
          <!-- No Surat -->

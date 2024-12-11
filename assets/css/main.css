@@ -7,3 +7,11 @@
       @apply bg-[#f1f1f1] font-poppins;
    }
 }
+@layer components {
+   .btn {
+      @apply px-6 py-3 font-bold tracking-wide rounded-full inline-flex justify-center  transition-all duration-300 text-sm;
+   }
+   .btn-primary {
+      @apply text-white bg-primary hover:bg-teal-600;
+   }
+}
