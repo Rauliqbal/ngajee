@@ -15,7 +15,8 @@ export default {
       },
       fontFamily: {
         rakkas: ["Rakkas", 'serif'],
-        poppins: ["Poppins", 'sans-serif']
+        poppins: ["Poppins", 'sans-serif'],
+        arabic: ["Scheherazade New", 'serif']
       },
       backgroundImage: {
         splashImg: "url('/images/backgroundSplash.svg')"

@@ -30,17 +30,17 @@ function getItem(item) {
         /> -->
          </div>
 
-         {{ list }}
-
-         <div class="grid gap-4 mt-10 md:grid-cols-2 lg:grid-cols-3 md:gap-6">
+         <div
+            class="grid divide-y-[1px] divide-[#CBD5E1] md:divide-y-0 mt-10 md:grid-cols-2 lg:grid-cols-3 md:gap-4"
+         >
             <CardSurat
                v-for="i in surat?.data"
                :key="i.nomor"
                :nomor="i.nomor"
                :nama="i.nama"
-               :nama-latin="i.namaLatin"
-               :jumlah-ayat="i.jumlahAyat"
-               :tempat-turun="i.tempatTurun"
+               :namaLatin="i.namaLatin"
+               :jumlahAyat="i.jumlahAyat"
+               :tempatTurun="i.tempatTurun"
             />
          </div>
       </main>
