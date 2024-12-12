@@ -1,5 +1,5 @@
 export default defineNuxtRouteMiddleware((to, from) => {
-   if (import.meta.env.SSR === false) {
+   if (process.client) {
       const username = localStorage.getItem("username");
       if (username) return navigateTo("/quran");
    } else {

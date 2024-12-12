@@ -14,4 +14,7 @@
    .btn-primary {
       @apply text-white bg-primary hover:bg-teal-600;
    }
+   .input {
+      @apply px-6 py-3 rounded-full outline-none focus:ring-2 focus:ring-white transition-all duration-300;
+   }
 }

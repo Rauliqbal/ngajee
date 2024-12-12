@@ -14,15 +14,8 @@ defineProps({
 
       <input
          type="text"
-         class="px-6 py-4 rounded-full outline-none focus:ring-2 focus:ring-white mt-8"
+         class="input mt-8"
          placeholder="Al-Mulk, Yasiin, Ar-Rahman"
       />
-
-      <!-- <UInput
-          color="primary"
-          variant="outline"
-          placeholder="Search..."
-          v-model="filter"
-        /> -->
    </div>
 </template>

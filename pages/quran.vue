@@ -1,10 +1,9 @@
 <script setup>
 const { data: surat } = await useFetch("https://equran.id/api/v2/surat");
-
 const userName = ref(getItem("username"));
 
 function getItem(item) {
-   if (process.client) {
+   if (import.meta.env.SSR === false) {
       return localStorage.getItem(item);
    } else {
       return undefined;
@@ -15,8 +14,7 @@ function getItem(item) {
    <div>
       <Navbar />
       <main class="container pb-4 pt-28">
-         <Greeting userName="Rauliqbal" />
-
+         <Greeting :userName="userName" />
          <div
             class="grid divide-y-[1px] divide-[#CBD5E1] md:divide-y-0 mt-10 md:grid-cols-2 lg:grid-cols-3 md:gap-4"
          >
