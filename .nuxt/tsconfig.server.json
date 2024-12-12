@@ -32,6 +32,9 @@
         "../*",
         "../*"
       ],
+      "nitropack/types": [
+        "../node_modules/nitropack/types"
+      ],
       "nitropack": [
         "../node_modules/nitropack"
       ],
@@ -68,9 +71,6 @@
       "nuxt": [
         "../node_modules/nuxt"
       ],
-      "#internal/nuxt/paths": [
-        "../node_modules/nuxt/dist/core/runtime/nitro/paths"
-      ],
       "~": [
         "./.."
       ],
@@ -82,6 +82,9 @@
       ],
       "@@": [
         "./.."
+      ],
+      "#shared": [
+        "../shared"
       ],
       "assets": [
         "../assets"
@@ -95,38 +98,17 @@
       "public/*": [
         "../public/*"
       ],
-      "#pwa": [
-        "../node_modules/@vite-pwa/nuxt/dist/runtime/composables/index"
+      "#build": [
+        "./"
       ],
-      "#ui": [
-        "../node_modules/@nuxt/ui/dist/runtime"
+      "#build/*": [
+        "./*"
       ],
-      "#ui/*": [
-        "../node_modules/@nuxt/ui/dist/runtime/*"
-      ],
-      "#ui-colors": [
-        "./ui.colors"
-      ],
-      "#color-mode-options": [
-        "./color-mode-options"
-      ],
-      "#image": [
-        "../node_modules/@nuxt/image/dist/runtime"
-      ],
-      "#image/*": [
-        "../node_modules/@nuxt/image/dist/runtime/*"
+      "#internal/nuxt/paths": [
+        "../node_modules/nuxt/dist/core/runtime/nitro/paths"
       ],
       "#vue-router": [
         "./vue-router"
-      ],
-      "#tailwind-config": [
-        "./tailwind.config"
-      ],
-      "#tailwind-config/*": [
-        "./tailwind.config/*"
-      ],
-      "#nuxt-icon-server-bundle": [
-        "./nuxt-icon-server-bundle"
       ]
     },
     "lib": [
@@ -137,13 +119,6 @@
   },
   "include": [
     "./types/nitro-nuxt.d.ts",
-    "../node_modules/@vite-pwa/nuxt/runtime/server",
-    "../node_modules/@nuxt/icon/runtime/server",
-    "../node_modules/@nuxtjs/color-mode/runtime/server",
-    "../node_modules/@nuxtjs/tailwindcss/runtime/server",
-    "../node_modules/@nuxt/ui/runtime/server",
-    "../node_modules/@nuxtjs/google-fonts/runtime/server",
-    "../node_modules/@nuxt/image/runtime/server",
     "../node_modules/@nuxt/devtools/runtime/server",
     "../node_modules/@nuxt/telemetry/runtime/server",
     "./types/nitro.d.ts",

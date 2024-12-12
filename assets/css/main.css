@@ -3,13 +3,18 @@
 @tailwind utilities;
 
 @layer base {
-  body {
-    @apply font-poppins bg-[#f1f1f1] dark:bg-dark-primary;
-  }
+   body {
+      @apply bg-[#f1f1f1] font-poppins;
+   }
 }
-
 @layer components {
-  .btn-primary {
-    @apply px-6 py-3 text-white font-semibold bg-primary dark:bg-teal-900 rounded-full hover:bg-primary/70 active:scale-95 transition-all duration-300 ease-out;
-  }
+   .btn {
+      @apply px-6 py-3 font-bold tracking-wide rounded-full inline-flex justify-center  transition-all duration-300 text-sm;
+   }
+   .btn-primary {
+      @apply text-white bg-primary hover:bg-teal-600;
+   }
+   .input {
+      @apply px-6 py-3 rounded-full outline-none focus:ring-2 focus:ring-white transition-all duration-300;
+   }
 }

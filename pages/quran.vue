@@ -1,10 +1,9 @@
 <script setup>
 const { data: surat } = await useFetch("https://equran.id/api/v2/surat");
-
 const userName = ref(getItem("username"));
 
 function getItem(item) {
-   if (process.client) {
+   if (import.meta.env.SSR === false) {
       return localStorage.getItem(item);
    } else {
       return undefined;
@@ -14,34 +13,19 @@ function getItem(item) {
 <template>
    <div>
       <Navbar />
-      <main class="container pb-24 pt-28 md:pb-0">
+      <main class="container pb-4 pt-28">
+         <Greeting :userName="userName" />
          <div
-            class="flex flex-col p-5 px-6 py-4 shadow-md bg-gradient-to-br from-primary to-emerald-700 dark:bg-gradient-to-br dark:from-teal-800 dark:to-teal-900 md:p-8 rounded-2xl"
+            class="grid divide-y-[1px] divide-[#CBD5E1] md:divide-y-0 mt-10 md:grid-cols-2 lg:grid-cols-3 md:gap-4"
          >
-            <p class="text-xl text-white md:text-2xl">Assalamulaikum</p>
-            <p class="mt-1 text-xl font-semibold text-white md:text-3xl">
-               {{ userName }}
-            </p>
-
-            <!-- <UInput
-          color="primary"
-          variant="outline"
-          placeholder="Search..."
-          v-model="filter"
-        /> -->
-         </div>
-
-         {{ list }}
-
-         <div class="grid gap-4 mt-10 md:grid-cols-2 lg:grid-cols-3 md:gap-6">
             <CardSurat
                v-for="i in surat?.data"
                :key="i.nomor"
                :nomor="i.nomor"
                :nama="i.nama"
-               :nama-latin="i.namaLatin"
-               :jumlah-ayat="i.jumlahAyat"
-               :tempat-turun="i.tempatTurun"
+               :namaLatin="i.namaLatin"
+               :jumlahAyat="i.jumlahAyat"
+               :tempatTurun="i.tempatTurun"
             />
          </div>
       </main>

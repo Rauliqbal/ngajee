@@ -1,6 +1,5 @@
 /** @type {import('tailwindcss').Config} */
 export default {
-  darkMode: 'class',
   content: [
     "./components/**/*.{js,vue,ts}",
     "./layouts/**/*.vue",
@@ -12,19 +11,19 @@ export default {
   theme: {
     extend: {
       colors: {
-        primary: '#3aada9',
-        'dark-primary': '#113b3d'
+        primary: '#00B5AA'
       },
       fontFamily: {
-        poppins: ['Poppins', 'sans-serif'],
-        lateef: ['Lateef', "serif"]
+        rakkas: ["Rakkas", 'serif'],
+        poppins: ["Poppins", 'sans-serif'],
+        arabic: ["Scheherazade New", 'serif']
+      },
+      backgroundImage: {
+        splashImg: "url('/images/backgroundSplash.svg')"
       },
       container: {
-        center: true,
         padding: '1rem',
-        screens: {
-          '2xl': '1180px'
-        }
+        center: true
       }
     },
   },

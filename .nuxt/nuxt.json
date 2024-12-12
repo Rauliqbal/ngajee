@@ -1,9 +1,9 @@
 {
-  "_hash": "uxXARrlabi",
+  "_hash": "MivfAhXTgc",
   "project": {
-    "rootDir": "/home/rauliqbal/Documents/PROJECT/WEBSITE/ngajee"
+    "rootDir": "/home/rauliqbal/Documents/PROJECT/WEBSITE/ngajee-app"
   },
   "versions": {
-    "nuxt": "3.13.2"
+    "nuxt": "3.14.1592"
   }
 }
