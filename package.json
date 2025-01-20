@@ -7,7 +7,12 @@
     "dev": "nuxt dev",
     "generate": "nuxt generate",
     "preview": "nuxt preview",
-    "postinstall": "nuxt prepare"
+    "postinstall": "nuxt prepare",
+    "prepare": "husky"
+  },"config": {
+    "commitizen": {
+      "path": "cz-conventional-changelog"
+    }
   },
   "dependencies": {
     "nuxt": "^3.14.1592",
@@ -15,7 +20,12 @@
     "vue-router": "latest"
   },
   "devDependencies": {
+    "@commitlint/cli": "^19.6.1",
+    "@commitlint/config-conventional": "^19.6.0",
     "autoprefixer": "^10.4.20",
+    "commitizen": "^4.3.1",
+    "cz-conventional-changelog": "^3.3.0",
+    "husky": "^9.1.7",
     "postcss": "^8.4.49",
     "tailwindcss": "^3.4.16"
   }
