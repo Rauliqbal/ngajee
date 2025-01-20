@@ -1,32 +1,32 @@
-import process from 'node:process';globalThis._importMeta_={url:import.meta.url,env:process.env};import { getRequestHeader, splitCookiesString, setResponseStatus, setResponseHeader, send, getRequestHeaders, defineEventHandler, handleCacheHeaders, createEvent, fetchWithEvent, isEvent, eventHandler, setHeaders, sendRedirect, proxyRequest, createApp, createRouter as createRouter$1, toNodeListener, lazyEventHandler, getResponseStatus, setResponseHeaders, createError, getRouterParam, getQuery as getQuery$1, readBody, getResponseStatusText } from 'file:///home/rauliqbal/Documents/PROJECT/WEBSITE/ngajee-app/node_modules/h3/dist/index.mjs';
+import process from 'node:process';globalThis._importMeta_={url:import.meta.url,env:process.env};import { getRequestHeader, splitCookiesString, setResponseStatus, setResponseHeader, send, getRequestHeaders, defineEventHandler, handleCacheHeaders, createEvent, fetchWithEvent, isEvent, eventHandler, setHeaders, sendRedirect, proxyRequest, createApp, createRouter as createRouter$1, toNodeListener, lazyEventHandler, getResponseStatus, setResponseHeaders, createError, getRouterParam, getQuery as getQuery$1, readBody, getResponseStatusText } from 'file:///home/rauliqbal/Project/WEBSITE/ngajee-app/node_modules/h3/dist/index.mjs';
 import { Server } from 'node:http';
 import { mkdirSync } from 'node:fs';
 import { tmpdir } from 'node:os';
 import { join } from 'node:path';
 import { parentPort, threadId } from 'node:worker_threads';
-import { getRequestDependencies, getPreloadLinks, getPrefetchLinks, createRenderer } from 'file:///home/rauliqbal/Documents/PROJECT/WEBSITE/ngajee-app/node_modules/vue-bundle-renderer/dist/runtime.mjs';
-import { stringify, uneval } from 'file:///home/rauliqbal/Documents/PROJECT/WEBSITE/ngajee-app/node_modules/devalue/index.js';
-import destr from 'file:///home/rauliqbal/Documents/PROJECT/WEBSITE/ngajee-app/node_modules/destr/dist/index.mjs';
-import { withQuery, joinURL, withTrailingSlash, parseURL, withoutBase, getQuery, joinRelativeURL } from 'file:///home/rauliqbal/Documents/PROJECT/WEBSITE/ngajee-app/node_modules/ufo/dist/index.mjs';
-import { renderToString } from 'file:///home/rauliqbal/Documents/PROJECT/WEBSITE/ngajee-app/node_modules/vue/server-renderer/index.mjs';
-import { propsToString, renderSSRHead } from 'file:///home/rauliqbal/Documents/PROJECT/WEBSITE/ngajee-app/node_modules/@unhead/ssr/dist/index.mjs';
-import { createHooks } from 'file:///home/rauliqbal/Documents/PROJECT/WEBSITE/ngajee-app/node_modules/hookable/dist/index.mjs';
-import { createFetch as createFetch$1, Headers as Headers$1 } from 'file:///home/rauliqbal/Documents/PROJECT/WEBSITE/ngajee-app/node_modules/ofetch/dist/node.mjs';
-import { createCall, createFetch } from 'file:///home/rauliqbal/Documents/PROJECT/WEBSITE/ngajee-app/node_modules/unenv/runtime/fetch/index.mjs';
-import { klona } from 'file:///home/rauliqbal/Documents/PROJECT/WEBSITE/ngajee-app/node_modules/klona/dist/index.mjs';
-import defu, { defuFn } from 'file:///home/rauliqbal/Documents/PROJECT/WEBSITE/ngajee-app/node_modules/defu/dist/defu.mjs';
-import { snakeCase } from 'file:///home/rauliqbal/Documents/PROJECT/WEBSITE/ngajee-app/node_modules/scule/dist/index.mjs';
-import { createStorage, prefixStorage } from 'file:///home/rauliqbal/Documents/PROJECT/WEBSITE/ngajee-app/node_modules/unstorage/dist/index.mjs';
-import unstorage_47drivers_47fs from 'file:///home/rauliqbal/Documents/PROJECT/WEBSITE/ngajee-app/node_modules/unstorage/drivers/fs.mjs';
-import { toRouteMatcher, createRouter } from 'file:///home/rauliqbal/Documents/PROJECT/WEBSITE/ngajee-app/node_modules/radix3/dist/index.mjs';
-import { getContext } from 'file:///home/rauliqbal/Documents/PROJECT/WEBSITE/ngajee-app/node_modules/unctx/dist/index.mjs';
+import { getRequestDependencies, getPreloadLinks, getPrefetchLinks, createRenderer } from 'file:///home/rauliqbal/Project/WEBSITE/ngajee-app/node_modules/vue-bundle-renderer/dist/runtime.mjs';
+import { stringify, uneval } from 'file:///home/rauliqbal/Project/WEBSITE/ngajee-app/node_modules/devalue/index.js';
+import destr from 'file:///home/rauliqbal/Project/WEBSITE/ngajee-app/node_modules/destr/dist/index.mjs';
+import { withQuery, joinURL, withTrailingSlash, parseURL, withoutBase, getQuery, joinRelativeURL } from 'file:///home/rauliqbal/Project/WEBSITE/ngajee-app/node_modules/ufo/dist/index.mjs';
+import { renderToString } from 'file:///home/rauliqbal/Project/WEBSITE/ngajee-app/node_modules/vue/server-renderer/index.mjs';
+import { propsToString, renderSSRHead } from 'file:///home/rauliqbal/Project/WEBSITE/ngajee-app/node_modules/@unhead/ssr/dist/index.mjs';
+import { createHooks } from 'file:///home/rauliqbal/Project/WEBSITE/ngajee-app/node_modules/hookable/dist/index.mjs';
+import { createFetch as createFetch$1, Headers as Headers$1 } from 'file:///home/rauliqbal/Project/WEBSITE/ngajee-app/node_modules/ofetch/dist/node.mjs';
+import { createCall, createFetch } from 'file:///home/rauliqbal/Project/WEBSITE/ngajee-app/node_modules/unenv/runtime/fetch/index.mjs';
+import { klona } from 'file:///home/rauliqbal/Project/WEBSITE/ngajee-app/node_modules/klona/dist/index.mjs';
+import defu, { defuFn } from 'file:///home/rauliqbal/Project/WEBSITE/ngajee-app/node_modules/defu/dist/defu.mjs';
+import { snakeCase } from 'file:///home/rauliqbal/Project/WEBSITE/ngajee-app/node_modules/scule/dist/index.mjs';
+import { createStorage, prefixStorage } from 'file:///home/rauliqbal/Project/WEBSITE/ngajee-app/node_modules/unstorage/dist/index.mjs';
+import unstorage_47drivers_47fs from 'file:///home/rauliqbal/Project/WEBSITE/ngajee-app/node_modules/unstorage/drivers/fs.mjs';
+import { toRouteMatcher, createRouter } from 'file:///home/rauliqbal/Project/WEBSITE/ngajee-app/node_modules/radix3/dist/index.mjs';
+import { getContext } from 'file:///home/rauliqbal/Project/WEBSITE/ngajee-app/node_modules/unctx/dist/index.mjs';
 import { AsyncLocalStorage } from 'node:async_hooks';
-import { consola } from 'file:///home/rauliqbal/Documents/PROJECT/WEBSITE/ngajee-app/node_modules/consola/dist/index.mjs';
-import { captureRawStackTrace, parseRawStackTrace } from 'file:///home/rauliqbal/Documents/PROJECT/WEBSITE/ngajee-app/node_modules/errx/dist/index.js';
-import { isVNode, version, unref } from 'file:///home/rauliqbal/Documents/PROJECT/WEBSITE/ngajee-app/node_modules/vue/index.mjs';
-import { hash } from 'file:///home/rauliqbal/Documents/PROJECT/WEBSITE/ngajee-app/node_modules/ohash/dist/index.mjs';
-import { createServerHead as createServerHead$1, CapoPlugin } from 'file:///home/rauliqbal/Documents/PROJECT/WEBSITE/ngajee-app/node_modules/unhead/dist/index.mjs';
-import { defineHeadPlugin } from 'file:///home/rauliqbal/Documents/PROJECT/WEBSITE/ngajee-app/node_modules/@unhead/shared/dist/index.mjs';
+import { consola } from 'file:///home/rauliqbal/Project/WEBSITE/ngajee-app/node_modules/consola/dist/index.mjs';
+import { captureRawStackTrace, parseRawStackTrace } from 'file:///home/rauliqbal/Project/WEBSITE/ngajee-app/node_modules/errx/dist/index.js';
+import { isVNode, version, unref } from 'file:///home/rauliqbal/Project/WEBSITE/ngajee-app/node_modules/vue/index.mjs';
+import { hash } from 'file:///home/rauliqbal/Project/WEBSITE/ngajee-app/node_modules/ohash/dist/index.mjs';
+import { createServerHead as createServerHead$1, CapoPlugin } from 'file:///home/rauliqbal/Project/WEBSITE/ngajee-app/node_modules/unhead/dist/index.mjs';
+import { defineHeadPlugin } from 'file:///home/rauliqbal/Project/WEBSITE/ngajee-app/node_modules/@unhead/shared/dist/index.mjs';
 
 function hasReqHeader(event, name, includes) {
   const value = getRequestHeader(event, name);
@@ -172,13 +172,13 @@ if (!window.__NUXT_DEVTOOLS_TIME_METRIC__) {
 window.__NUXT_DEVTOOLS_TIME_METRIC__.appInit = Date.now()
 `;
 
-const _IXieBLoCrz = (function(nitro) {
+const _xfBZl9iY31 = (function(nitro) {
   nitro.hooks.hook("render:html", (htmlContext) => {
     htmlContext.head.push(`<script>${script}<\/script>`);
   });
 });
 
-const rootDir = "/home/rauliqbal/Documents/PROJECT/WEBSITE/ngajee-app";
+const rootDir = "/home/rauliqbal/Project/WEBSITE/ngajee-app";
 
 const appHead = {"meta":[{"name":"viewport","content":"width=device-width, initial-scale=1"},{"charset":"utf-8"}],"link":[{"rel":"preconnect","href":"https://fonts.googleapis.com"},{"rel":"stylesheet","href":"https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Rakkas&family=Scheherazade+New:wght@400;500;600;700&display=swap"}],"style":[],"script":[],"noscript":[],"title":"Ngajee - Al Quran Indonesia","charset":"utf-8","viewport":"width=device-width, initial-scale=1"};
 
@@ -197,7 +197,7 @@ const devReducers = {
   URL: (data) => data instanceof URL ? data.toString() : void 0
 };
 const asyncContext = getContext("nuxt-dev", { asyncContext: true, AsyncLocalStorage });
-const _SjdjRwUujX = (nitroApp) => {
+const _oesdF2wlCY = (nitroApp) => {
   const handler = nitroApp.h3App.handler;
   nitroApp.h3App.handler = (event) => {
     return asyncContext.callAsync({ logs: [], event }, () => handler(event));
@@ -267,18 +267,20 @@ function onConsoleLog(callback) {
 }
 
 const plugins = [
-  _IXieBLoCrz,
-_SjdjRwUujX
+  _xfBZl9iY31,
+_oesdF2wlCY
 ];
 
-const _lazy_Rpuk88 = () => Promise.resolve().then(function () { return renderer$1; });
+const _lazy_05TODk = () => Promise.resolve().then(function () { return users_post$1; });
+const _lazy_myj91E = () => Promise.resolve().then(function () { return renderer$1; });
 
 const handlers = [
-  { route: '/__nuxt_error', handler: _lazy_Rpuk88, lazy: true, middleware: false, method: undefined },
-  { route: '/**', handler: _lazy_Rpuk88, lazy: true, middleware: false, method: undefined }
+  { route: '/api/users', handler: _lazy_05TODk, lazy: true, middleware: false, method: "post" },
+  { route: '/__nuxt_error', handler: _lazy_myj91E, lazy: true, middleware: false, method: undefined },
+  { route: '/**', handler: _lazy_myj91E, lazy: true, middleware: false, method: undefined }
 ];
 
-const serverAssets = [{"baseName":"server","dir":"/home/rauliqbal/Documents/PROJECT/WEBSITE/ngajee-app/server/assets"}];
+const serverAssets = [{"baseName":"server","dir":"/home/rauliqbal/Project/WEBSITE/ngajee-app/server/assets"}];
 
 const assets = createStorage();
 
@@ -290,11 +292,11 @@ const storage = createStorage({});
 
 storage.mount('/assets', assets);
 
-storage.mount('root', unstorage_47drivers_47fs({"driver":"fs","readOnly":true,"base":"/home/rauliqbal/Documents/PROJECT/WEBSITE/ngajee-app","ignore":["**/node_modules/**","**/.git/**"]}));
-storage.mount('src', unstorage_47drivers_47fs({"driver":"fs","readOnly":true,"base":"/home/rauliqbal/Documents/PROJECT/WEBSITE/ngajee-app/server","ignore":["**/node_modules/**","**/.git/**"]}));
-storage.mount('build', unstorage_47drivers_47fs({"driver":"fs","readOnly":false,"base":"/home/rauliqbal/Documents/PROJECT/WEBSITE/ngajee-app/.nuxt","ignore":["**/node_modules/**","**/.git/**"]}));
-storage.mount('cache', unstorage_47drivers_47fs({"driver":"fs","readOnly":false,"base":"/home/rauliqbal/Documents/PROJECT/WEBSITE/ngajee-app/.nuxt/cache","ignore":["**/node_modules/**","**/.git/**"]}));
-storage.mount('data', unstorage_47drivers_47fs({"driver":"fs","base":"/home/rauliqbal/Documents/PROJECT/WEBSITE/ngajee-app/.data/kv","ignore":["**/node_modules/**","**/.git/**"]}));
+storage.mount('root', unstorage_47drivers_47fs({"driver":"fs","readOnly":true,"base":"/home/rauliqbal/Project/WEBSITE/ngajee-app","ignore":["**/node_modules/**","**/.git/**"]}));
+storage.mount('src', unstorage_47drivers_47fs({"driver":"fs","readOnly":true,"base":"/home/rauliqbal/Project/WEBSITE/ngajee-app/server","ignore":["**/node_modules/**","**/.git/**"]}));
+storage.mount('build', unstorage_47drivers_47fs({"driver":"fs","readOnly":false,"base":"/home/rauliqbal/Project/WEBSITE/ngajee-app/.nuxt","ignore":["**/node_modules/**","**/.git/**"]}));
+storage.mount('cache', unstorage_47drivers_47fs({"driver":"fs","readOnly":false,"base":"/home/rauliqbal/Project/WEBSITE/ngajee-app/.nuxt/cache","ignore":["**/node_modules/**","**/.git/**"]}));
+storage.mount('data', unstorage_47drivers_47fs({"driver":"fs","base":"/home/rauliqbal/Project/WEBSITE/ngajee-app/.data/kv","ignore":["**/node_modules/**","**/.git/**"]}));
 
 function useStorage(base = "") {
   return base ? prefixStorage(storage, base) : storage;
@@ -1089,6 +1091,16 @@ const errorDev = /*#__PURE__*/Object.freeze({
   template: template$1
 });
 
+const users_post = defineEventHandler(async (event) => {
+  const { name } = await readBody(event);
+  localStorage.setItem("username", name);
+});
+
+const users_post$1 = /*#__PURE__*/Object.freeze({
+  __proto__: null,
+  default: users_post
+});
+
 const Vue3 = version[0] === "3";
 
 function resolveUnref(r) {
@@ -1166,8 +1178,8 @@ function publicAssetsURL(...path) {
 
 globalThis.__buildAssetsURL = buildAssetsURL;
 globalThis.__publicAssetsURL = publicAssetsURL;
-const getClientManifest = () => import('file:///home/rauliqbal/Documents/PROJECT/WEBSITE/ngajee-app/.nuxt/dist/server/client.manifest.mjs').then((r) => r.default || r).then((r) => typeof r === "function" ? r() : r);
-const getServerEntry = () => import('file:///home/rauliqbal/Documents/PROJECT/WEBSITE/ngajee-app/.nuxt/dist/server/server.mjs').then((r) => r.default || r);
+const getClientManifest = () => import('file:///home/rauliqbal/Project/WEBSITE/ngajee-app/.nuxt/dist/server/client.manifest.mjs').then((r) => r.default || r).then((r) => typeof r === "function" ? r() : r);
+const getServerEntry = () => import('file:///home/rauliqbal/Project/WEBSITE/ngajee-app/.nuxt/dist/server/server.mjs').then((r) => r.default || r);
 const getSSRStyles = lazyCachedFunction(() => Promise.resolve().then(function () { return styles$1; }).then((r) => r.default || r));
 const getSSRRenderer = lazyCachedFunction(async () => {
   const manifest = await getClientManifest();

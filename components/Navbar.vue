@@ -48,7 +48,7 @@
                         <li>
                            <NuxtLink
                               class="capitalize font-josefin tracking-wide hover:text-primary transition ease-out duration-200 text-gray-800"
-                              to="/doa-doa"
+                              to="/doa-harian"
                               >doa harian</NuxtLink
                            >
                         </li>

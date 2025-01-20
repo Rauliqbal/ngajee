@@ -8,7 +8,8 @@ defineProps({
 });
 </script>
 <template>
-   <div
+   <NuxtLink
+      :to="'/surat/' + nomor"
       class="py-4 flex justify-between items-center md:items-end gap-4 md:px-5 md:bg-white md:rounded-xl"
    >
       <div class="flex items-center lg:flex-col lg:items-start gap-2">
@@ -27,5 +28,5 @@ defineProps({
       </div>
 
       <p class="font-arabic text-3xl lg:text-4xl text-primary">{{ nama }}</p>
-   </div>
+   </NuxtLink>
 </template>

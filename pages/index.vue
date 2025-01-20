@@ -6,7 +6,7 @@ definePageMeta({
    middleware: "auth",
 });
 
-function usernameHandle() {
+async function usernameHandle() {
    if (import.meta.env.SSR === false) {
       const name = localStorage.setItem("username", username.value);
       if (name) return navigateTo("/quran");
@@ -31,7 +31,7 @@ function usernameHandle() {
          class="absolute z-50 w-full p-4 max-w-sm flex justify-center transition-all duration-300"
       >
          <form
-            v-on:submit="usernameHandle"
+            @submit="usernameHandle"
             class="p-4 bg-white rounded-2xl flex flex-col shadow-2xl container"
          >
             <input
