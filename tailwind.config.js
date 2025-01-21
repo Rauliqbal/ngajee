@@ -26,7 +26,8 @@ export default {
         center: true,
         screens: {
           xl: '1240px',
-          '2xl': '1440px'
+
+
         }
       }
     },
