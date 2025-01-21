@@ -40,31 +40,21 @@
                      >
                         <li>
                            <NuxtLink
-                              class="capitalize font-josefin tracking-wide hover:text-primary transition ease-out duration-200 text-gray-800"
+                              class="capitalize tracking-wide hover:text-primary transition ease-out duration-200 text-gray-800"
                               to="/quran"
                               >quran</NuxtLink
                            >
                         </li>
                         <li>
-                           <NuxtLink
-                              class="capitalize font-josefin tracking-wide hover:text-primary transition ease-out duration-200 text-gray-800"
-                              to="/doa-harian"
-                              >doa harian</NuxtLink
-                           >
+                           <div class="link-disabled" to="/doa-harian">
+                              doa harian
+                           </div>
                         </li>
                         <li>
-                           <NuxtLink
-                              class="capitalize font-josefin tracking-wide hover:text-primary transition ease-out duration-200 text-gray-800"
-                              to="#"
-                              >profile</NuxtLink
-                           >
+                           <div class="link-disabled" to="#">profile</div>
                         </li>
                         <li>
-                           <NuxtLink
-                              class="capitalize font-josefin tracking-wide hover:text-primary transition ease-out duration-200 text-gray-800"
-                              to="#"
-                              >setting</NuxtLink
-                           >
+                           <div class="link-disabled" to="#">setting</div>
                         </li>
                      </ul>
                      <div
