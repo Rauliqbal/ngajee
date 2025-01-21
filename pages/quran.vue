@@ -5,6 +5,7 @@ const {
    error,
 } = await useLazyFetch("https://equran.id/api/v2/surat");
 const userName = ref(getItem("username"));
+const search = ref("");
 
 function getItem(item) {
    if (import.meta.env.SSR === false) {
@@ -13,11 +14,24 @@ function getItem(item) {
       return undefined;
    }
 }
+
+const filteredItems = computed(() => {
+   return surat.value.data.filter((item) => {
+      return item.namaLatin.toLowerCase().includes(search.value.toLowerCase());
+   });
+});
 </script>
 <template>
    <Navbar />
    <main class="container pb-4 pt-28">
-      <Greeting :userName="userName" />
+      <Greeting :userName="userName">
+         <input
+            type="text"
+            class="input mt-8"
+            placeholder="Al-Mulk, Yasiin, Ar-Rahman"
+            v-model="search"
+         />
+      </Greeting>
       <div
          v-if="pending"
          class="flex flex-col items-center justify-center py-20"
@@ -39,7 +53,7 @@ function getItem(item) {
          class="grid divide-y-[1px] divide-[#CBD5E1] md:divide-y-0 mt-10 md:grid-cols-2 lg:grid-cols-3 md:gap-4"
       >
          <CardSurat
-            v-for="i in surat?.data"
+            v-for="i in filteredItems"
             :key="i.nomor"
             :nomor="i.nomor"
             :nama="i.nama"

@@ -12,10 +12,6 @@ defineProps({
          {{ userName }}
       </p>
 
-      <input
-         type="text"
-         class="input mt-8"
-         placeholder="Al-Mulk, Yasiin, Ar-Rahman"
-      />
+      <slot></slot>
    </div>
 </template>
