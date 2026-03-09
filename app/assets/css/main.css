@@ -1,10 +1,18 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
 
+@theme {
+   --color-primary: #00B5AA;
+   --font-poppins :"Poppins", 'sans-serif';
+   --font-arabic: "Scheherazade New", 'serif';
+   --font-rakkas: "Rakkas", 'serif';
+   --splashImg: "url('/images/backgroundSplash.svg')";
+}
 @layer base {
    body {
       @apply bg-[#f1f1f1] font-poppins;
+   }
+   .container {
+      @apply max-w-7xl mx-auto px-4 md:px-0
    }
 }
 @layer components {
@@ -16,5 +24,10 @@
    }
    .input {
       @apply px-6 py-3 rounded-full outline-none focus:ring-2 focus:ring-white transition-all duration-300;
+   }
+}
+@layer utilities {
+   .link-disabled {
+      @apply capitalize  tracking-wide   text-gray-400;
    }
 }

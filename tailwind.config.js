@@ -23,7 +23,12 @@ export default {
       },
       container: {
         padding: '1rem',
-        center: true
+        center: true,
+        screens: {
+          xl: '1240px',
+
+
+        }
       }
     },
   },
