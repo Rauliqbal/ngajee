@@ -1,17 +1,20 @@
 
-import { updateAppConfig } from '#app/config'
 import { defuFn } from 'defu'
 
 const inlineConfig = {
   "nuxt": {}
 }
 
+/** client **/
+import { _replaceAppConfig } from '#app/config'
+
 // Vite - webpack is handled directly in #app/config
-if (import.meta.hot) {
+if (import.meta.dev && !import.meta.nitro && import.meta.hot) {
   import.meta.hot.accept((newModule) => {
-    updateAppConfig(newModule.default)
+    _replaceAppConfig(newModule.default)
   })
 }
+/** client-end **/
 
 
 

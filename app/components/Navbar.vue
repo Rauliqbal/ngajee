@@ -1,4 +1,11 @@
-<script setup></script>
+<script setup>
+const navlinks = [
+   {
+      name: "quran",
+      url: '/quran'
+   }
+]
+</script>
 
 <template>
    <nav class="fixed inset-x-0 top-0 z-20 py-4 md:py-6 bg-white">
@@ -30,7 +37,7 @@
                   class="absolute inset-0 h-screen bg-gray-900/20 backdrop-blur-sm opacity-0 hidden peer-checked:opacity-100 peer-checked:block transition-all duration-300 md:peer-checked:hidden"
                ></label>
                <div
-                  class="peer-checked:translate-x-0 fixed inset-0 w-[calc(100%-60px)] translate-x-[-100%] bg-white md:bg-transparent transition duration-300 md:w-auto md:static md:translate-x-0 z-20"
+                  class="peer-checked:translate-x-0 fixed inset-0 w-[calc(100%-60px)] -translate-x-full bg-white md:bg-transparent transition duration-300 md:w-auto md:static md:translate-x-0 z-20"
                >
                   <div
                      class="flex flex-col md:items-center justify-between md:flex-row px-4 h-full pb-4 md:pb-0"
@@ -38,24 +45,19 @@
                      <ul
                         class="bg-white flex px-4 pt-28 md:pb-0 space-y-5 md:px-0 md:space-y-0 flex-col md:flex-row md:space-x-12 md:pt-0"
                      >
-                        <li>
+                        <li v-for="link in navlinks" :id="link">
                            <NuxtLink
                               class="capitalize tracking-wide hover:text-primary transition ease-out duration-200 text-gray-800"
-                              to="/quran"
-                              >quran</NuxtLink
+                              :to="link.url"
+                              >{{link.name}}</NuxtLink
                            >
                         </li>
-                        <li>
+                        <!-- <li>
                            <div class="link-disabled" to="/doa-harian">
                               doa harian
                            </div>
-                        </li>
-                        <li>
-                           <div class="link-disabled" to="#">profile</div>
-                        </li>
-                        <li>
-                           <div class="link-disabled" to="#">setting</div>
-                        </li>
+                        </li> -->
+                       
                      </ul>
                      <div
                         class="hidden md:block text-xl mx-8 text-gray-400 w-[2px] h-8 bg-gray-300"
