@@ -6,6 +6,13 @@ const {
 } = await useLazyFetch("https://equran.id/api/v2/surat");
 const userName = ref(getItem("username"));
 const search = ref("");
+const surahs = [
+   "Al-Mulk",
+   "Yasin",
+   "Ar-Rahman",
+   "Al-Kahfi",
+   "Al-Waqiah"
+]
 
 function getItem(item) {
    if (import.meta.env.SSR === false) {
@@ -25,20 +32,15 @@ const filteredItems = computed(() => {
    <Navbar />
    <main class="container pb-4 pt-28">
       <Greeting :userName="userName">
-         <input
-            type="text"
-            class="input mt-8"
-            placeholder="Al-Mulk, Yasiin, Ar-Rahman"
-            v-model="search"
-         />
+         <input type="text" class="input mt-8" placeholder="Al-Mulk, Yasiin, Ar-Rahman" v-model="search" />
       </Greeting>
-      <div
-         v-if="pending"
-         class="flex flex-col items-center justify-center py-20"
-      >
-         <div
-            class="border-gray-300 h-20 w-20 animate-spin rounded-full border-8 border-t-primary"
-         />
+      <ul>
+         <li v-for="surah in filteredSurahs" :key="surah">
+            {{ surah }}
+         </li>
+      </ul>
+      <div v-if="pending" class="flex flex-col items-center justify-center py-20">
+         <div class="border-gray-300 h-20 w-20 animate-spin rounded-full border-8 border-t-primary" />
          <p class="text-center text-lg mx-auto mt-4">Tunggu Sebentar Yak 🙏🏻</p>
       </div>
 
@@ -48,19 +50,10 @@ const filteredItems = computed(() => {
             Aduhh... Datanya lagi kosong nih, Developernya juga bingung🙇🏻‍♂️
          </p>
       </div>
-      <div
-         v-else
-         class="grid divide-y-[1px] divide-[#CBD5E1] md:divide-y-0 mt-10 md:grid-cols-2 lg:grid-cols-3 md:gap-4"
-      >
-         <CardSurat
-            v-for="i in filteredItems"
-            :key="i.nomor"
-            :nomor="i.nomor"
-            :nama="i.nama"
-            :namaLatin="i.namaLatin"
-            :jumlahAyat="i.jumlahAyat"
-            :tempatTurun="i.tempatTurun"
-         />
+      <div v-else
+         class="grid divide-y-[1px] divide-[#CBD5E1] md:divide-y-0 mt-10 md:grid-cols-2 lg:grid-cols-3 md:gap-4">
+         <CardSurat v-for="i in filteredItems" :key="i.nomor" :nomor="i.nomor" :nama="i.nama" :namaLatin="i.namaLatin"
+            :jumlahAyat="i.jumlahAyat" :tempatTurun="i.tempatTurun" />
       </div>
    </main>
    <Footer />
